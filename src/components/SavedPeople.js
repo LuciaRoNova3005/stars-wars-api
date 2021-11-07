@@ -1,4 +1,4 @@
-function PokemonFav(props) {
+function SavedPeople(props) {
   return (
     <div className="cardfav">
       <ul
@@ -13,17 +13,9 @@ function PokemonFav(props) {
         </li>
 
         <li className="tittle">{props.name}</li>
-
-        <ul className="types">
-          {props.types.map((element, index) => (
-            <li className="text" key={index}>
-              {element}
-            </li>
-          ))}
-        </ul>
       </ul>
     </div>
   );
 }
 
-export default PokemonFav;
+export default SavedPeople;

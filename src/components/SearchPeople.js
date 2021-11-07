@@ -1,21 +1,18 @@
 import React from "react";
 import Pokemon from "./Pokemon";
 
-const Pokelist = (props) => {
+const SearchPeople = (props) => {
   return (
-    <div className="container">
-      {props.dataList.map((element) => (
-        <Pokemon
-          handleFav={props.handleFav}
-          key={element.id}
-          img={element.url}
-          name={element.name}
-          types={element.types}
-          id={element.id}
-        ></Pokemon>
-      ))}
-    </div>
+    <>
+      <input
+        className="form__name"
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Busca a tu personaje"
+      />
+    </>
   );
 };
 
-export default Pokelist;
+export default SearchPeople;
