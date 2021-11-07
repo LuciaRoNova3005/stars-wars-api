@@ -5,18 +5,18 @@ const SearchPeople = (props) => {
   const handleClick = (ev) => {
     props.handleSearch({
       value: ev.target.value,
-      key: "name",
+      key: "search",
     });
   };
   return (
     <>
       <form action="">
         <input
-          className="form__name"
+          className="form__search"
           type="text"
-          name="name"
-          id="name"
-          placeholder="Search"
+          name="search"
+          id="search"
+          placeholder="search"
         />
         <button className="btn search" onClick={handleClick}>
           SEARCH
