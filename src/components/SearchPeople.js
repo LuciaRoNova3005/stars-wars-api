@@ -5,30 +5,25 @@ const SearchPeople = (props) => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
   };
-  const handleClick = (ev) => {
-    props.handleSearch({
+  const handleChange = (ev) => {
+    props.handleFilter({
       value: ev.target.value,
-      key: "search",
+      key: "name",
     });
   };
   return (
     <>
-      <form action="">
+      <form onSubmit={handleSubmit}>
         <input
           className="form__search"
           type="text"
-          name="search"
-          value={props.filterName}
-          id="search"
+          name="name"
+          id="name"
           placeholder="search"
+          value={props.filterName}
+          onChange={handleChange}
         />
-        <button
-          className="btn search"
-          onClick={handleClick}
-          onSubmit={handleSubmit}
-        >
-          SEARCH
-        </button>
+        <button className="btn search">SEARCH</button>
       </form>
       <CharactersList
         onSubmit={props.handleSubmit}
