@@ -5,17 +5,6 @@ const getApiData = () => {
        */
       .then((response) => response.json())
       .then((data) => {
-        const data = data.results.map((character) => {
-          return {
-            id: character.id,
-            img: character.image,
-            name: character.name,
-            species: character.species,
-            status: character.status,
-            origin: character.origin.name,
-            episode: character.episode.length,
-          };
-        });
         return data;
       })
   );
