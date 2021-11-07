@@ -1,5 +1,4 @@
 import React from "react";
-import Pokemon from "./Pokemon";
 
 const SearchPeople = (props) => {
   return (
@@ -9,8 +8,10 @@ const SearchPeople = (props) => {
         type="text"
         name="name"
         id="name"
-        placeholder="Busca a tu personaje"
+        placeholder="Search"
       />
+      <button className="btn">SEARCH</button>
+      <Character></Character>
     </>
   );
 };
