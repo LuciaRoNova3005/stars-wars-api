@@ -12,6 +12,12 @@ function App() {
     ls.set("character", characters);
   }, [characters]);
   /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
+
+  const handleFilter = (data) => {
+    if (data.key !== "search") {
+      setSearchPeople(data.value);
+    }
+  };
   return (
     <>
       <header>

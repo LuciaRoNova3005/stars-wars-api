@@ -7,7 +7,9 @@ function Card(props) {
         <li>1984</li>
         <li>yellow</li>
         <button className="btn details">Show details</button>
-        <button className="btn save">Save</button>
+        <button className="btn save" onSubmit={props.handleSubmit}>
+          Save
+        </button>
       </ul>
     </>
   );

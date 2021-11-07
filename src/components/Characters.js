@@ -10,7 +10,7 @@ function Characters(props) {
         <h3>Birth Year</h3>
         <h3>Eye Color</h3>
       </section>
-      <Card></Card>
+      <Card onSubmit={props.handleSubmit}></Card>
     </div>
   );
 }
