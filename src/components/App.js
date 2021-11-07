@@ -7,6 +7,11 @@ import InformationAbout from "./InformationAbout";
 
 function App() {
   const [characters, setcharacters] = useState(ls.get("characters", []));
+
+  useEffect(() => {
+    ls.set("character", characters);
+  }, [characters]);
+  /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
   return (
     <>
       <header>
