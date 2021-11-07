@@ -1,10 +1,12 @@
 import "../stylesheets/App.scss";
 import React, { useState, useEffect } from "react";
+import ls from "../Services/local-storage";
 import SearchPeople from "./SearchPeople";
 import SavedPeople from "./SavedPeople";
 import InformationAbout from "./InformationAbout";
 
 function App() {
+  const [characters, setcharacters] = useState(ls.get("characters", []));
   return (
     <>
       <header>
