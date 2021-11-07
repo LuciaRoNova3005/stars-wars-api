@@ -1,7 +1,7 @@
 function Card(props) {
   return (
     <>
-      <ul className="">
+      <ul className="headerContainer">
         <li>Name</li>
         <li> Masculino</li>
         <li>1984</li>
