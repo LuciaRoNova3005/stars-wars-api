@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 
-function Characters(props) {
+function CharactersList(props) {
   return (
     <div>
       <section className="headerContainer">
@@ -15,4 +15,4 @@ function Characters(props) {
   );
 }
 
-export default Characters;
+export default CharactersList;
