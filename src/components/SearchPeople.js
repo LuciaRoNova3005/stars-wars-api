@@ -11,7 +11,7 @@ const SearchPeople = (props) => {
         id="name"
         placeholder="Search"
       />
-      <button className="btn">SEARCH</button>
+      <button className="btn search">SEARCH</button>
       <Characters></Characters>
     </>
   );

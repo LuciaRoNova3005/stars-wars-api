@@ -6,6 +6,8 @@ function Card(props) {
         <li> Masculino</li>
         <li>1984</li>
         <li>yellow</li>
+        <button className="btn details">Show details</button>
+        <button className="btn save">Save</button>
       </ul>
     </>
   );
