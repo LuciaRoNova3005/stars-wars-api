@@ -5,7 +5,7 @@ const getApiData = () => {
        */
       .then((response) => response.json())
       .then((data) => {
-        const characters = data.results.map((character) => {
+        const data = data.results.map((character) => {
           return {
             id: character.id,
             img: character.image,
@@ -16,7 +16,7 @@ const getApiData = () => {
             episode: character.episode.length,
           };
         });
-        return characters;
+        return data;
       })
   );
 };

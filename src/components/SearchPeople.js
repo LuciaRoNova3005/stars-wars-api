@@ -1,4 +1,5 @@
 import React from "react";
+import Characters from "./Characters";
 
 const SearchPeople = (props) => {
   return (
@@ -11,7 +12,7 @@ const SearchPeople = (props) => {
         placeholder="Search"
       />
       <button className="btn">SEARCH</button>
-      <Character></Character>
+      <Characters></Characters>
     </>
   );
 };

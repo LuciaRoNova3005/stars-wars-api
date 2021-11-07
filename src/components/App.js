@@ -1,7 +1,7 @@
 import "../stylesheets/App.scss";
 import React, { useState, useEffect } from "react";
-import SavedPeople from "./SavedPeople";
 import SearchPeople from "./SearchPeople";
+import SavedPeople from "./SavedPeople";
 
 function App() {
   return (
@@ -12,7 +12,6 @@ function App() {
       </header>
       <main>
         <SearchPeople></SearchPeople>
-
         <SavedPeople></SavedPeople>
       </main>
     </>
