@@ -33,6 +33,7 @@ function App() {
       setFilterName(data.value);
     }
   };
+
   const filtercharacters = characters.filter((character) => {
     return character.name.toLowerCase().includes(filterName.toLowerCase());
   });

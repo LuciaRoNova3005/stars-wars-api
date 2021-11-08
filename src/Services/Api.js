@@ -5,8 +5,6 @@ const getApiData = () => {
        */
       .then((response) => response.json())
       .then((data) => {
-        /*Tenemos los datos de la api y los limpiamos
-         sort() invoca una función que recibe dos valores y los compara*/
         const characters = data.results;
         return characters;
       })

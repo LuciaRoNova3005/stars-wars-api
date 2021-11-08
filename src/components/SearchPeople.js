@@ -1,16 +1,18 @@
-import React from "react";
 import CharactersList from "./CharactersList";
+import React, { useState, useEffect } from "react";
 
 const SearchPeople = (props) => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
   };
+
   const handleChange = (ev) => {
     props.handleFilter({
       value: ev.target.value,
       key: "name",
     });
   };
+
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -20,10 +22,16 @@ const SearchPeople = (props) => {
           name="name"
           id="name"
           placeholder="search"
-          value={props.filterName}
+          //defaultValue={props.filterName || ""}
+          value={props.setFilterName}
           onChange={handleChange}
         />
-        <button className="btn search">SEARCH</button>
+        <button
+          className="btn search"
+          //onClick={props.handleCLick}
+        >
+          SEARCH
+        </button>
       </form>
       <CharactersList
         onSubmit={props.handleSubmit}
