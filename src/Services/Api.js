@@ -1,4 +1,4 @@
-const getApiData = () => {
+const getApiData = (data) => {
   return (
     fetch("https://swapi.dev/api/people/")
       /*Hay que retornar el fecth para que no salga undefined
