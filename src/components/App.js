@@ -28,7 +28,11 @@ function App() {
       setcharacters(charactersData);
     });
   };
-
+  const handleFilter = (data) => {
+    if (data.key === "name") {
+      setFilterName(data.value);
+    }
+  };
   return (
     <>
       <header>
@@ -38,8 +42,10 @@ function App() {
       <main className="container">
         <div className="">
           <SearchPeople
+            handleFilter={handleFilter}
             handleCLick={handleCLick}
             characters={characters}
+            filterName={filterName}
           ></SearchPeople>
           <SavedPeople></SavedPeople>
         </div>

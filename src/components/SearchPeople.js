@@ -4,7 +4,12 @@ const SearchPeople = (props) => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
   };
-
+  const handleChange = (ev) => {
+    props.handleFilter({
+      value: ev.target.value,
+      key: "name",
+    });
+  };
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -15,7 +20,8 @@ const SearchPeople = (props) => {
           id="name"
           placeholder="search"
           //defaultValue={props.filterName || ""}
-          value={props.setFilterName}
+          value={props.filterName}
+          onChange={handleChange}
         />
         <button className="btn search" onClick={props.handleCLick}>
           SEARCH
