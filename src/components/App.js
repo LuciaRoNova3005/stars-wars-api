@@ -14,7 +14,8 @@ function App() {
   useEffect(() => {
     ls.set("character", characters);
     ls.set("filterName", filterName);
-  }, [characters, filterName]);
+    ls.set("charactersFav", charactersFav);
+  }, [characters, filterName, charactersFav]);
   /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
 
   const handleCLick = () => {
@@ -47,7 +48,7 @@ function App() {
             characters={filtercharacters}
             filterName={filterName}
           ></SearchPeople>
-          <SavedPeople></SavedPeople>
+          <SavedPeople charactersFav={charactersFav}></SavedPeople>
         </div>
         <InformationAbout></InformationAbout>
       </main>
