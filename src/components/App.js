@@ -28,11 +28,17 @@ function App() {
       setcharacters(charactersData);
     });
   };
+
   const handleFilter = (data) => {
     if (data.key === "name") {
       setFilterName(data.value);
     }
   };
+
+  const filtercharacters = characters.filter((character) => {
+    return character.name.toLowerCase().includes(filterName.toLowerCase());
+  });
+
   return (
     <>
       <header>
@@ -44,7 +50,7 @@ function App() {
           <SearchPeople
             handleFilter={handleFilter}
             handleCLick={handleCLick}
-            characters={characters}
+            characters={filtercharacters}
             filterName={filterName}
           ></SearchPeople>
           <SavedPeople></SavedPeople>
