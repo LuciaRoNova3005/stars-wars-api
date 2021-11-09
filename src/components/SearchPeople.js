@@ -19,7 +19,6 @@ const SearchPeople = (props) => {
           name="name"
           id="name"
           placeholder="search"
-          //defaultValue={props.filterName || ""}
           value={props.filterName}
           onChange={handleChange}
         />

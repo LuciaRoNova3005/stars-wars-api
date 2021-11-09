@@ -9,13 +9,7 @@ import InformationAbout from "./InformationAbout";
 function App() {
   const [characters, setcharacters] = useState(ls.get("characters", []));
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
-
-  useEffect(() => {
-    /*Si el array esta vacío no accedes al locastorage
-     */
-    if (characters.length === 0) {
-    }
-  }, []);
+  const [charactersFav, setFavs] = useState(ls.get("charactersFav", []));
 
   useEffect(() => {
     ls.set("character", characters);
