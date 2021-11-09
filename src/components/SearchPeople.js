@@ -1,5 +1,4 @@
 import CharactersList from "./CharactersList";
-import React, { useState, useEffect } from "react";
 
 const SearchPeople = (props) => {
   const handleSubmit = (ev) => {

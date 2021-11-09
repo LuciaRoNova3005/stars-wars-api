@@ -9,18 +9,24 @@ import InformationAbout from "./InformationAbout";
 function App() {
   const [characters, setcharacters] = useState(ls.get("characters", []));
 
-  const handleCLick = () => {
-    getApiData().then((charactersData) => {
-      setcharacters(charactersData);
-    });
-  };
-
   useEffect(() => {
     /*Si el array esta vacío no accedes al locastorage
      */
     if (characters.length === 0) {
     }
   }, []);
+
+  useEffect(() => {
+    ls.set("character", characters);
+  }, [characters]);
+  /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
+
+  const handleCLick = () => {
+    getApiData().then((charactersData) => {
+      setcharacters(charactersData);
+    });
+  };
+
   return (
     <>
       <header>
