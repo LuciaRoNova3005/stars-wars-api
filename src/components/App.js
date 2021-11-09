@@ -8,6 +8,7 @@ import InformationAbout from "./InformationAbout";
 
 function App() {
   const [characters, setcharacters] = useState(ls.get("characters", []));
+  const [filterName, setFilterName] = useState(ls.get("filterName", ""));
 
   useEffect(() => {
     /*Si el array esta vacío no accedes al locastorage
@@ -18,7 +19,8 @@ function App() {
 
   useEffect(() => {
     ls.set("character", characters);
-  }, [characters]);
+    ls.set("filterName", filterName);
+  }, [characters, filterName]);
   /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
 
   const handleCLick = () => {
