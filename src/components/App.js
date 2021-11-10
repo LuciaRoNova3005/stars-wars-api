@@ -76,7 +76,7 @@ function App() {
               ></SearchPeople>
               <SavedPeople favs={characterFav}></SavedPeople>
             </div>
-            <InformationAbout></InformationAbout>
+            <InformationAbout characters={filtercharacters}></InformationAbout>
           </Route>
         </Switch>
       </main>
