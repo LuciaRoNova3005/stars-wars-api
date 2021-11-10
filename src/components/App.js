@@ -6,18 +6,19 @@ import getApiData from "../Services/Api";
 import SearchPeople from "./SearchPeople";
 import SavedPeople from "./SavedPeople";
 import InformationAbout from "./InformationAbout";
+
 import { Link } from "react-router-dom";
 
 function App() {
   const [characters, setcharacters] = useState(ls.get("characters", []));
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
-  const [charactersFav, setFavs] = useState(ls.get("charactersFav", []));
+  const [characterFav, setFavs] = useState(ls.get("charactersFav", []));
 
   useEffect(() => {
+    ls.set("charactersFav", characterFav);
     ls.set("character", characters);
     ls.set("filterName", filterName);
-    ls.set("charactersFav", charactersFav);
-  }, [characters, filterName, charactersFav]);
+  }, [characters, filterName, characterFav]);
   /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
 
   const handleCLick = () => {
@@ -36,22 +37,23 @@ function App() {
     return character.name.toLowerCase().includes(filterName.toLowerCase());
   });
 
-  const handleFav = (ev) => {
-    const selectCardFav = characters.find(
-      (fav) => fav.id === parseInt(ev.currentTarget.id)
-    );
-
-    if (!charactersFav.includes(selectCardFav)) {
-      setFavs([...charactersFav, selectCardFav]);
-      console.log(charactersFav);
+  const handleFav = (clickedFav) => {
+    const cardFavorited = characterFav.find((elementFav) => {
+      console.log(elementFav.name);
+      return elementFav.name === clickedFav;
+    });
+    if (cardFavorited === undefined) {
+      const characterFavorite = characters.find((element) => {
+        return element.name === clickedFav;
+      });
+      setFavs([...characterFav, characterFavorite]);
 
       return;
     }
-    const newFavoriters = charactersFav.filter(
-      (card) => card.id !== parseInt(ev.currentTarget.id)
+    const newFavoriters = characterFav.filter(
+      (element) => element.name !== clickedFav
     );
     setFavs(newFavoriters);
-    console.log(charactersFav);
   };
 
   return (
@@ -70,8 +72,9 @@ function App() {
                 handleCLick={handleCLick}
                 characters={filtercharacters}
                 filterName={filterName}
+                favs={characterFav}
               ></SearchPeople>
-              <SavedPeople favs={characters}></SavedPeople>
+              <SavedPeople favs={characterFav}></SavedPeople>
             </div>
             <InformationAbout></InformationAbout>
           </Route>

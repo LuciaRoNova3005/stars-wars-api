@@ -10,10 +10,11 @@ function Card(props) {
         <li>{props.eye}</li>
         <button className="btn details">Show details</button>
         <button
-          onClick={props.handleFav}
           className="btn save"
-          onSubmit={props.handleSubmit}
-          id={props.id}
+          // id={props.id}
+          // name={props.name}
+          // onSubmit={props.handleSubmit}
+          onClick={props.handleFav}
         >
           Save
         </button>

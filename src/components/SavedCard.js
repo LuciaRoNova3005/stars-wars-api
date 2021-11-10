@@ -1,7 +1,7 @@
 function SavedCard(props) {
   return (
     <div>
-      <ul id={props.id} key={props.key}>
+      <ul id={props.id}>
         <li>
           <img
             src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV}"

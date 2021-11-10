@@ -7,7 +7,11 @@ function SavedPeople(props) {
       <h2>Saved People</h2>
       <div className="">
         {props.favs.map((fav) => (
-          <SavedCard key={fav.name} name={fav.name} id={fav.name}></SavedCard>
+          <SavedCard
+            handleFav={props.handleFav}
+            name={fav.name}
+            id={fav.name}
+          ></SavedCard>
         ))}
       </div>
       <p>You didn´t save any people yet</p>
