@@ -5,10 +5,12 @@ function SavedPeople(props) {
   return (
     <div className="">
       <h2>Saved People</h2>
+      <div className="">
+        {props.favs.map((fav) => (
+          <SavedCard key={fav.name} name={fav.name} id={fav.name}></SavedCard>
+        ))}
+      </div>
       <p>You didn´t save any people yet</p>
-      {props.charactersFav.map((element) => (
-        <SavedCard key={element.name} name={element.name}></SavedCard>
-      ))}
     </div>
   );
 }

@@ -22,11 +22,16 @@ const SearchPeople = (props) => {
           value={props.filterName}
           onChange={handleChange}
         />
-        <button className="btn search" onClick={props.handleCLick}>
+        <button
+          className="btn search"
+          onClick={props.handleCLick}
+          characters={props.characters}
+        >
           SEARCH
         </button>
       </form>
       <CharactersList
+        handleFav={props.handleFav}
         //onSubmit={props.handleSubmit}
         //characters={props.handleCLick}
         characters={props.characters}

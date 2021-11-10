@@ -1,10 +1,12 @@
 import "../stylesheets/App.scss";
 import React, { useState, useEffect } from "react";
 import ls from "../Services/local-storage";
+import { Route, Switch } from "react-router-dom";
 import getApiData from "../Services/Api";
 import SearchPeople from "./SearchPeople";
 import SavedPeople from "./SavedPeople";
 import InformationAbout from "./InformationAbout";
+import { Link } from "react-router-dom";
 
 function App() {
   const [characters, setcharacters] = useState(ls.get("characters", []));
@@ -34,6 +36,24 @@ function App() {
     return character.name.toLowerCase().includes(filterName.toLowerCase());
   });
 
+  const handleFav = (ev) => {
+    const selectCardFav = characters.find(
+      (fav) => fav.id === parseInt(ev.currentTarget.id)
+    );
+
+    if (!charactersFav.includes(selectCardFav)) {
+      setFavs([...charactersFav, selectCardFav]);
+      console.log(charactersFav);
+
+      return;
+    }
+    const newFavoriters = charactersFav.filter(
+      (card) => card.id !== parseInt(ev.currentTarget.id)
+    );
+    setFavs(newFavoriters);
+    console.log(charactersFav);
+  };
+
   return (
     <>
       <header>
@@ -41,16 +61,21 @@ function App() {
         <h2 className="tittle2">Play with Swapi</h2>
       </header>
       <main className="container">
-        <div className="">
-          <SearchPeople
-            handleFilter={handleFilter}
-            handleCLick={handleCLick}
-            characters={filtercharacters}
-            filterName={filterName}
-          ></SearchPeople>
-          <SavedPeople charactersFav={charactersFav}></SavedPeople>
-        </div>
-        <InformationAbout></InformationAbout>
+        <Switch>
+          <Route exact path="/">
+            <div className="">
+              <SearchPeople
+                handleFav={handleFav}
+                handleFilter={handleFilter}
+                handleCLick={handleCLick}
+                characters={filtercharacters}
+                filterName={filterName}
+              ></SearchPeople>
+              <SavedPeople favs={characters}></SavedPeople>
+            </div>
+            <InformationAbout></InformationAbout>
+          </Route>
+        </Switch>
       </main>
     </>
   );

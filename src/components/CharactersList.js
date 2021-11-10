@@ -12,12 +12,14 @@ function CharactersList(props) {
       </section>
       {props.characters.map((element) => (
         <Card
+          handleFav={props.handleFav}
           onSubmit={props.handleSubmit}
           key={element.name}
           name={element.name}
           gender={element.gender}
           birth={element.birth_year}
           eye={element.eye_color}
+          id={element.name}
         ></Card>
       ))}
     </div>
