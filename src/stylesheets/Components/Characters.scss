@@ -17,16 +17,7 @@
   flex-direction: row;
   background-color: white;
 }
-.tittle3 {
-  width: 60px;
-  text-align: center;
-  @include tablet {
-    width: 100px;
-  }
-  @include desktop {
-    width: 120px;
-  }
-}
+
 .btn {
   padding: 3px;
 }
