@@ -11,26 +11,14 @@ function App() {
   const [characters, setCharacters] = useState(ls.get("characters", []));
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
   const [characterFav, setFavs] = useState(ls.get("charactersFav", []));
-  const [filterAll, setFilterAll] = useState(ls.get("filterAll", ""));
-  const [filterMale, setFilterMale] = useState(ls.get("filterMale", ""));
-  const [filterFemale, setFilterFemale] = useState(ls.get("filterFemale", ""));
-  // const [characterDetails, setDetails] = useState("");
+  const [filterGender, setfilterGender] = useState(ls.get("filterGender", ""));
 
   useEffect(() => {
     ls.set("character", characters);
     ls.set("filterName", filterName);
     ls.set("charactersFav", characterFav);
-    ls.set("filterAll", filterAll);
-    ls.set("filterMale", filterMale);
-    ls.set("filterFemale", filterFemale);
-  }, [
-    characters,
-    filterName,
-    characterFav,
-    filterAll,
-    filterMale,
-    filterFemale,
-  ]);
+    ls.set("filterGender", filterGender);
+  }, [characters, filterName, characterFav, filterGender]);
   /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
 
   const handleCLick = () => {
@@ -44,7 +32,6 @@ function App() {
       setFilterName(data.value);
     }
   };
-
   const filtercharacters = characters.filter((character) => {
     return character.name.toLowerCase().includes(filterName.toLowerCase());
   });
@@ -67,6 +54,18 @@ function App() {
     );
     setFavs(newFavorites);
   };
+  const handleFilterFav = (data) => {
+    if (data.key === "gender") {
+      setfilterGender(data.value);
+    }
+  };
+  const filterFav = characterFav.filter((character) => {
+    if (filterGender === "") {
+      return true;
+    } else {
+      return character.gender === filterGender;
+    }
+  });
 
   return (
     <>
@@ -81,7 +80,11 @@ function App() {
                 characters={filtercharacters}
                 filterName={filterName}
               ></SearchPeople>
-              <SavedPeople characterFav={characterFav}></SavedPeople>
+              <SavedPeople
+                handleFilterFav={handleFilterFav}
+                characterFav={filterFav}
+                filterGender={filterGender}
+              ></SavedPeople>
             </div>
 
             <InformationAbout></InformationAbout>
