@@ -2,7 +2,7 @@ function Cardfav(props) {
   return (
     <>
       {props.characterFav.map((fav, index) => (
-        <ul className="cardFav">
+        <ul className="">
           <li id={index}>
             <img
               className="favorites__img"
@@ -10,10 +10,6 @@ function Cardfav(props) {
               alt="{fav.name}"
             ></img>
             <h3 className="tittle3">{fav.name}</h3>
-            <button className="btn details">Show details</button>
-            <button className="btn remove" id={fav.name}>
-              Remove
-            </button>
           </li>
         </ul>
       ))}

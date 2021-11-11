@@ -69,25 +69,32 @@ function App() {
 
   return (
     <>
+      <header>
+        <h1 className="tittle">Web test</h1>
+        <h2 className="tittle2">Play with Swapi</h2>
+      </header>
       <main className="container">
         <Switch>
           <Route exact path="/">
-            <div>
-              <SearchPeople
-                handleFav={handleFav}
-                handleFilter={handleFilter}
-                handleCLick={handleCLick}
-                characters={filtercharacters}
-                filterName={filterName}
-              ></SearchPeople>
-              <SavedPeople
-                handleFilterFav={handleFilterFav}
-                characterFav={filterFav}
-                filterGender={filterGender}
-              ></SavedPeople>
-            </div>
+            <div className="main">
+              <div className="">
+                <SearchPeople
+                  handleFav={handleFav}
+                  handleFilter={handleFilter}
+                  handleCLick={handleCLick}
+                  characters={filtercharacters}
+                  filterName={filterName}
+                ></SearchPeople>
 
-            <InformationAbout></InformationAbout>
+                <SavedPeople
+                  handleFilterFav={handleFilterFav}
+                  characterFav={filterFav}
+                  filterGender={filterGender}
+                ></SavedPeople>
+              </div>
+
+              <InformationAbout></InformationAbout>
+            </div>
           </Route>
         </Switch>
       </main>

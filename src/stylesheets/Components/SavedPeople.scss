@@ -7,6 +7,7 @@
   &__btn {
     font-size: 10px;
     background-color: rgb(128, 121, 121);
+    font-size: bold;
     :hover {
       font-size: 12px;
       font-weight: bold;
@@ -21,6 +22,11 @@
   }
   &__img {
     width: 40px;
-    align-items: center;
+    @include tablet {
+      width: 80px;
+    }
+    @include desktop {
+      font-size: 110x;
+    }
   }
 }

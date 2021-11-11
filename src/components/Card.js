@@ -2,7 +2,7 @@ import React from "react";
 
 function Card(props) {
   return (
-    <div>
+    <div className="card">
       <ul className="list" id={props.id}>
         <li className="list__element">{props.name}</li>
         <li className="list__element">{props.gender}</li>

@@ -17,15 +17,41 @@
 .tittle {
   font-size: 18px;
   text-align: center;
+  @include tablet {
+    font-size: 22px;
+  }
+  @include desktop {
+    font-size: 26px;
+  }
 }
+
 .tittle2 {
   font-size: 16px;
   text-align: center;
+  @include tablet {
+    font-size: 18px;
+  }
+  @include desktop {
+    font-size: 22px;
+  }
 }
 .tittle3 {
   font-size: 12px;
   text-align: center;
+  @include tablet {
+    font-size: 16px;
+  }
+  @include desktop {
+    font-size: 20px;
+  }
 }
 .hidden {
   display: none;
+}
+.main {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+  }
 }

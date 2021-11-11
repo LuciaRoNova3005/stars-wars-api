@@ -8,6 +8,7 @@ function SavedPeople(props) {
       key: "gender",
     });
   };
+
   return (
     <div className="favorites">
       <h2 className="tittle2">Saved People</h2>
