@@ -10,7 +10,6 @@ function App() {
   const [characters, setCharacters] = useState(ls.get("characters", []));
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
   const [characterFav, setFavs] = useState(ls.get("charactersFav", []));
-  // const [characterDetails, setDetails] = useState("");
 
   useEffect(() => {
     ls.set("character", characters);
@@ -24,6 +23,7 @@ function App() {
       setCharacters(charactersData);
     });
   };
+  console.log(characters);
 
   const handleFilter = (data) => {
     if (data.key === "name") {
@@ -39,13 +39,14 @@ function App() {
     const favoriteCha = characterFav.find((element) => {
       return element.name === clickedChar.currentTarget.id;
     });
+    console.log(favoriteCha);
     if (favoriteCha === undefined) {
       const charFav = characters.find((element) => {
         return element.name === clickedChar.currentTarget.id;
       });
 
       setFavs([...characterFav, charFav]);
-
+      console.log(charFav);
       return;
     }
 
@@ -55,32 +56,24 @@ function App() {
     setFavs(newFavorites);
   };
 
-  // const handleDetails = (clicked) => {
-  //   const detaislCha = characters.find((element) => {
-  //     return element.name === clicked.currentTarget.id;
-  //   });
-
-  //   if (detaislCha === undefined) {
-  //     const charDetails = characters.find((element) => {
-  //       return element.name === clicked.currentTarget.id;
-  //     });
-  //     console.log(charDetails);
-  //     setDetails(characterDetails, charDetails);
-  //     return;
-  //   }
-  // };
-
+  const handleDetails = (clickedChar) => {
+    const detaislCha = characters.find((element) => {
+      return element.name === clickedChar.currentTarget.id;
+    });
+    console.log(detaislCha);
+  };
   return (
     <>
-      <header className="header">
+      <header>
         <h1 className="tittle">Web test</h1>
         <h2 className="tittle2">Play with Swapi</h2>
       </header>
       <main className="container">
         <Switch>
           <Route exact path="/">
-            <div>
+            <div className="">
               <SearchPeople
+                handleDetails={handleDetails}
                 handleFav={handleFav}
                 handleFilter={handleFilter}
                 handleCLick={handleCLick}
@@ -88,27 +81,24 @@ function App() {
                 filterName={filterName}
                 favs={characterFav}
               ></SearchPeople>
-              <div className="favorites">
-                <h2 className="tittle2">Saved People</h2>
-                <div className="favorites__list">
-                  {characterFav.map((fav, index) => (
-                    <ul className="cardFav">
-                      <li id={index}>
-                        <img
-                          className="favorites__img"
-                          src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV}"
-                          alt="{fav.name}"
-                        ></img>
-                        <h3 className="tittle3">{fav.name}</h3>
-                        <button className="btn details">Show details</button>
-                      </li>
-                      {/* <button className="btn remove" onSubmit={props.handleSubmit}>
-                              Save
-                            </button> */}
-                    </ul>
-                  ))}
+              <h2>Saved People</h2>
+              {characterFav.map((fav, index) => (
+                <div>
+                  <ul>
+                    <li id={index}>
+                      <img
+                        src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV}"
+                        alt=""
+                      ></img>
+                      <h2>{fav.name}</h2>
+                      <button className="btn details">Show details</button>
+                    </li>
+                    {/* <button className="btn remove" onSubmit={props.handleSubmit}>
+                        Save
+                      </button> */}
+                  </ul>
                 </div>
-              </div>
+              ))}
               {/* <SavedPeople favs={characterFav}></SavedPeople> */}
             </div>
 

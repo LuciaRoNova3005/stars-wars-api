@@ -11,8 +11,8 @@ const SearchPeople = (props) => {
     });
   };
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <div className="containerSearchPeople">
+      <form className="form" onSubmit={handleSubmit}>
         <input
           className="form__search"
           type="text"
@@ -27,22 +27,20 @@ const SearchPeople = (props) => {
           onClick={props.handleCLick}
           characters={props.characters}
         >
-          SEARCH
+          Search
         </button>
       </form>
       <section className="headerContainer">
-        <h3>Name</h3>
-        <h3>Gender</h3>
-        <h3>Birth Year</h3>
-        <h3>Eye Color</h3>
+        <h3 className="tittle3">Name</h3>
+        <h3 className="tittle3">Gender</h3>
+        <h3 className="tittle3">Birth Year</h3>
+        <h3 className="tittle3">Eye Color</h3>
       </section>
       <CharactersList
         handleFav={props.handleFav}
-        //onSubmit={props.handleSubmit}
-        //characters={props.handleCLick}
         characters={props.characters}
       ></CharactersList>
-    </>
+    </div>
   );
 };
 

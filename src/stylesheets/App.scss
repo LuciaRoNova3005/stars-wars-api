@@ -3,8 +3,26 @@
 @import "../stylesheets/Components/Characters.scss";
 @import "../stylesheets/Components/card.scss";
 @import "../stylesheets/Components/SavedPeople.scss";
+@import "../stylesheets/Components/InformationAbouts.scss";
 
+.header {
+  text-align: center;
+}
 .container {
   display: flex;
-  margin: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tittle {
+  font-size: 18px;
+  text-align: center;
+}
+.tittle2 {
+  font-size: 16px;
+  text-align: center;
+}
+.tittle3 {
+  font-size: 12px;
+  text-align: center;
 }

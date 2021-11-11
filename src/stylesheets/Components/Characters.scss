@@ -1,6 +1,26 @@
+.containerSearchPeople {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.form__search {
+  border: solid 2px rgb(0, 204, 255);
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: -5px;
+}
+
 .headerContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 50vh;
+  background-color: white;
+}
+.tittle3 {
+  width: 60px;
+  text-align: center;
+}
+.btn {
+  padding: 5px;
 }

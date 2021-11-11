@@ -1,6 +1,12 @@
 .list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 75vh;
+  font-size: 12px;
+  background-color: white;
+
+  &__element {
+    width: 60px;
+    text-align: center;
+    background-color: white;
+  }
 }
