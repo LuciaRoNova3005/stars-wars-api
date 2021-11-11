@@ -1,20 +1,27 @@
 import React from "react";
-import SavedCard from "./SavedCard";
 
 function SavedPeople(props) {
   return (
-    <div className="">
-      <h2>Saved People</h2>
-      <div className="">
-        {props.favs.map((fav) => (
-          <SavedCard
-            handleFav={props.handleFav}
-            name={fav.name}
-            id={fav.name}
-          ></SavedCard>
+    <div className="favorites">
+      <h2 className="tittle2">Saved People</h2>
+      <div className="favorites__list">
+        {props.characterFav.map((fav, index) => (
+          <ul className="cardFav">
+            <li id={index}>
+              <img
+                className="favorites__img"
+                src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV}"
+                alt="{fav.name}"
+              ></img>
+              <h3 className="tittle3">{fav.name}</h3>
+              <button className="btn details">Show details</button>
+              <button className="btn remove" id={fav.name}>
+                Remove
+              </button>
+            </li>
+          </ul>
         ))}
       </div>
-      <p>You didn´t save any people yet</p>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import getApiData from "../Services/Api";
 import SearchPeople from "./SearchPeople";
 import InformationAbout from "./InformationAbout";
+import SavedPeople from "./SavedPeople";
 
 function App() {
   const [characters, setCharacters] = useState(ls.get("characters", []));
@@ -69,10 +70,6 @@ function App() {
 
   return (
     <>
-      <header className="header">
-        <h1 className="tittle">Web test</h1>
-        <h2 className="tittle2">Play with Swapi</h2>
-      </header>
       <main className="container">
         <Switch>
           <Route exact path="/">
@@ -84,27 +81,7 @@ function App() {
                 characters={filtercharacters}
                 filterName={filterName}
               ></SearchPeople>
-              <div className="favorites">
-                <h2 className="tittle2">Saved People</h2>
-                <div className="favorites__list">
-                  {characterFav.map((fav, index) => (
-                    <ul className="cardFav">
-                      <li id={index}>
-                        <img
-                          className="favorites__img"
-                          src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV}"
-                          alt="{fav.name}"
-                        ></img>
-                        <h3 className="tittle3">{fav.name}</h3>
-                        <button className="btn details">Show details</button>
-                        <button className="btn remove" id={fav.name}>
-                          Remove
-                        </button>
-                      </li>
-                    </ul>
-                  ))}
-                </div>
-              </div>
+              <SavedPeople characterFav={characterFav}></SavedPeople>
             </div>
 
             <InformationAbout></InformationAbout>
