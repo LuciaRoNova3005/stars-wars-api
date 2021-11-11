@@ -49,6 +49,20 @@ function App() {
       console.log(charFav);
       return;
     }
+    // const handleDetails = (clicked) => {
+    //   const detaislCha = characters.find((element) => {
+    //     return element.name === clicked.currentTarget.id;
+    //   });
+
+    //   if (detaislCha === undefined) {
+    //     const charDetails = characters.find((element) => {
+    //       return element.name === clicked.currentTarget.id;
+    //     });
+    //     console.log(charDetails);
+    //     setDetails(characterDetails, charDetails);
+    //     return;
+    //   }
+    // };
 
     const newFavorites = characterFav.filter(
       (element) => element.id !== clickedChar

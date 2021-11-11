@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Card(props) {
   return (
-    <>
+    <div>
       <ul className="list" id={props.id}>
         <li className="list__element">{props.name}</li>
         <li className="list__element">{props.gender}</li>
@@ -16,7 +15,7 @@ function Card(props) {
       <button className="btn save" id={props.name} onClick={props.handleFav}>
         Saved
       </button>
-    </>
+    </div>
   );
 }
 export default Card;

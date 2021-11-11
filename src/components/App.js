@@ -10,13 +10,26 @@ function App() {
   const [characters, setCharacters] = useState(ls.get("characters", []));
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
   const [characterFav, setFavs] = useState(ls.get("charactersFav", []));
+  const [filterAll, setFilterAll] = useState(ls.get("filterAll", ""));
+  const [filterMale, setFilterMale] = useState(ls.get("filterMale", ""));
+  const [filterFemale, setFilterFemale] = useState(ls.get("filterFemale", ""));
   // const [characterDetails, setDetails] = useState("");
 
   useEffect(() => {
     ls.set("character", characters);
     ls.set("filterName", filterName);
     ls.set("charactersFav", characterFav);
-  }, [characters, filterName, characterFav]);
+    ls.set("filterAll", filterAll);
+    ls.set("filterMale", filterMale);
+    ls.set("filterFemale", filterFemale);
+  }, [
+    characters,
+    filterName,
+    characterFav,
+    filterAll,
+    filterMale,
+    filterFemale,
+  ]);
   /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
 
   const handleCLick = () => {
@@ -39,13 +52,12 @@ function App() {
     const favoriteCha = characterFav.find((element) => {
       return element.name === clickedChar.currentTarget.id;
     });
+
     if (favoriteCha === undefined) {
       const charFav = characters.find((element) => {
         return element.name === clickedChar.currentTarget.id;
       });
-
       setFavs([...characterFav, charFav]);
-
       return;
     }
 
@@ -54,21 +66,6 @@ function App() {
     );
     setFavs(newFavorites);
   };
-
-  // const handleDetails = (clicked) => {
-  //   const detaislCha = characters.find((element) => {
-  //     return element.name === clicked.currentTarget.id;
-  //   });
-
-  //   if (detaislCha === undefined) {
-  //     const charDetails = characters.find((element) => {
-  //       return element.name === clicked.currentTarget.id;
-  //     });
-  //     console.log(charDetails);
-  //     setDetails(characterDetails, charDetails);
-  //     return;
-  //   }
-  // };
 
   return (
     <>
@@ -86,7 +83,6 @@ function App() {
                 handleCLick={handleCLick}
                 characters={filtercharacters}
                 filterName={filterName}
-                favs={characterFav}
               ></SearchPeople>
               <div className="favorites">
                 <h2 className="tittle2">Saved People</h2>
@@ -101,6 +97,9 @@ function App() {
                         ></img>
                         <h3 className="tittle3">{fav.name}</h3>
                         <button className="btn details">Show details</button>
+                        <button className="btn remove" id={fav.name}>
+                          Remove
+                        </button>
                       </li>
                       {/* <button className="btn remove" onSubmit={props.handleSubmit}>
                               Save

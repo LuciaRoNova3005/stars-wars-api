@@ -6,6 +6,8 @@ function CharactersList(props) {
     <div>
       {props.characters.map((element, index) => (
         <Card
+          characters={props.characters}
+          favs={props.favs}
           id={index}
           handleFav={props.handleFav}
           onSubmit={props.handleSubmit}
