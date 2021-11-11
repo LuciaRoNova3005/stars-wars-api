@@ -101,14 +101,10 @@ function App() {
                           Remove
                         </button>
                       </li>
-                      {/* <button className="btn remove" onSubmit={props.handleSubmit}>
-                              Save
-                            </button> */}
                     </ul>
                   ))}
                 </div>
               </div>
-              {/* <SavedPeople favs={characterFav}></SavedPeople> */}
             </div>
 
             <InformationAbout></InformationAbout>
