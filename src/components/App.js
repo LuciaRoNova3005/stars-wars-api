@@ -77,7 +77,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <div className="main">
-              <div className="">
+              <div>
                 <SearchPeople
                   handleFav={handleFav}
                   handleFilter={handleFilter}
@@ -85,7 +85,6 @@ function App() {
                   characters={filtercharacters}
                   filterName={filterName}
                 ></SearchPeople>
-
                 <SavedPeople
                   handleFilterFav={handleFilterFav}
                   characterFav={filterFav}
@@ -93,7 +92,9 @@ function App() {
                 ></SavedPeople>
               </div>
 
-              <InformationAbout></InformationAbout>
+              <div>
+                <InformationAbout></InformationAbout>
+              </div>
             </div>
           </Route>
         </Switch>
