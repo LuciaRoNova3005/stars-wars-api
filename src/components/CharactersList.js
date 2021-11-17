@@ -23,7 +23,7 @@ function CharactersList(props) {
 
   return (
     <section>
-      <ul className="card">{charactersElements}</ul>
+      <ul className="">{charactersElements}</ul>
     </section>
   );
 }

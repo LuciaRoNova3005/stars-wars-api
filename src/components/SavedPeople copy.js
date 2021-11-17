@@ -9,14 +9,6 @@ function SavedPeople(props) {
     });
   };
 
-  const charactersFav = props.characterFav.map((fav, index) => {
-    return (
-      <li id={index}>
-        <Cardfav id={fav.id} name={fav.name} />
-      </li>
-    );
-  });
-
   return (
     <div className="favorites">
       <h2 className="tittle2">Saved People</h2>
@@ -38,10 +30,9 @@ function SavedPeople(props) {
           Female
         </option>
       </select>
-
-      <section>
-        <ul className="favorites__list">{charactersFav}</ul>
-      </section>
+      <div className="favorites__list">
+        <Cardfav characterFav={props.characterFav}></Cardfav>
+      </div>
     </div>
   );
 }

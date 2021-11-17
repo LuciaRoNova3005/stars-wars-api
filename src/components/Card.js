@@ -2,7 +2,7 @@ import React from "react";
 
 function Card(props) {
   return (
-    <article className="card">
+    <article className="list" id={props.name}>
       <p className="list__element">{props.name}</p>
       <p className="list__element">{props.gender}</p>
       <p className="list__element">{props.birth}</p>
