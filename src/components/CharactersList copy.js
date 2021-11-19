@@ -16,7 +16,7 @@ function CharactersList(props) {
           gender={element.gender}
           birth={element.birth_year}
           eye={element.eye_color}
-          id={element.name}
+          //id={element.name}
         ></Card>
       ))}
     </div>

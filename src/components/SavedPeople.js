@@ -11,8 +11,8 @@ function SavedPeople(props) {
 
   const charactersFav = props.characterFav.map((fav, index) => {
     return (
-      <li id={index}>
-        <Cardfav id={fav.id} name={fav.name} />
+      <li id={fav.index}>
+        <Cardfav name={fav.name} id={index} />
       </li>
     );
   });

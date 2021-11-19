@@ -12,6 +12,7 @@ function App() {
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
   const [characterFav, setFavs] = useState(ls.get("charactersFav", []));
   const [filterGender, setfilterGender] = useState(ls.get("filterGender", ""));
+  console.log(characterFav);
 
   useEffect(() => {
     ls.set("character", characters);
@@ -84,6 +85,7 @@ function App() {
                   handleCLick={handleCLick}
                   characters={filtercharacters}
                   filterName={filterName}
+                  characterFav={characterFav}
                 ></SearchPeople>
                 <SavedPeople
                   handleFilterFav={handleFilterFav}
