@@ -7,6 +7,8 @@ function Cardfav(props) {
         alt={props.name}
       ></img>
       <h3 className="tittle3">{props.name}</h3>
+      <button className="btn details">Show details</button>
+      <button className="btn remove">Remove</button>
     </article>
   );
 }
