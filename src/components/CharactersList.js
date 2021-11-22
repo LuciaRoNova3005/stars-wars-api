@@ -6,15 +6,14 @@ function CharactersList(props) {
     const ifFav = props.characterFav.find(
       (favorite) => favorite.name === element.name
     );
-    console.log(ifFav);
+
     return (
-      <li className={ifFav ? "list hidden" : "list"} key={element.id}>
+      <li className={ifFav ? "list hidden" : "list"} key={index}>
         <Card
-          favs={element.favs}
           id={index}
           handleFav={props.handleFav}
           onSubmit={props.handleSubmit}
-          key={element.name}
+          key={index}
           name={element.name}
           gender={element.gender}
           birth={element.birth_year}

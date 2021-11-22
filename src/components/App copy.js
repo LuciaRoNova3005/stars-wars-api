@@ -12,6 +12,7 @@ function App() {
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
   const [characterFav, setFavs] = useState(ls.get("charactersFav", []));
   const [filterGender, setfilterGender] = useState(ls.get("filterGender", ""));
+  console.log(characterFav);
 
   useEffect(() => {
     ls.set("character", characters);
@@ -41,7 +42,6 @@ function App() {
       return element.name === clickedChar.currentTarget.id;
     });
 
-    console.log(clickedChar.currentTarget.id);
     if (favoriteCha === undefined) {
       const charFav = characters.find((element) => {
         return element.name === clickedChar.currentTarget.id;
@@ -54,7 +54,6 @@ function App() {
     const newFavorites = characterFav.filter(
       (element) => element.id !== clickedChar
     );
-    console.log(newFavorites);
     setFavs(newFavorites);
   };
   const handleFilterFav = (data) => {
@@ -69,23 +68,6 @@ function App() {
       return character.gender === filterGender;
     }
   });
-
-  const handleRemoveFav = (clickedChar) => {
-    const favCardId = characterFav.find((element) => {
-      return element.name === clickedChar.currentTarget.id;
-    });
-    console.log(favCardId.name);
-    // if (characterFav.includes(favCardId)) {
-    //   setFavs([...characterFav, favCardId]);
-
-    //   return;
-    // }
-    const newFavoriters = characterFav.filter(
-      (cardFav) => cardFav !== favCardId
-    );
-
-    setFavs(newFavoriters);
-  };
 
   return (
     <>
@@ -107,7 +89,6 @@ function App() {
                   characterFav={characterFav}
                 ></SearchPeople>
                 <SavedPeople
-                  handleRemoveFav={handleRemoveFav}
                   handleFilterFav={handleFilterFav}
                   characterFav={filterFav}
                   filterGender={filterGender}
