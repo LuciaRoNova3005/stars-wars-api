@@ -19,7 +19,6 @@ function App() {
     ls.set("charactersFav", characterFav);
     ls.set("filterGender", filterGender);
   }, [characters, filterName, characterFav, filterGender]);
-  /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
 
   const handleCLick = () => {
     getApiData().then((charactersData) => {
@@ -50,12 +49,6 @@ function App() {
       setFavs([...characterFav, charFav]);
       return;
     }
-
-    const newFavorites = characterFav.filter(
-      (element) => element.id !== clickedChar
-    );
-    console.log(newFavorites);
-    setFavs(newFavorites);
   };
   const handleFilterFav = (data) => {
     if (data.key === "gender") {
@@ -71,18 +64,11 @@ function App() {
   });
 
   const handleRemoveFav = (clickedChar) => {
-    const favCardId = characterFav.find((element) => {
+    const favCard = characterFav.find((element) => {
       return element.name === clickedChar.currentTarget.id;
     });
-    console.log(favCardId.name);
-    // if (characterFav.includes(favCardId)) {
-    //   setFavs([...characterFav, favCardId]);
 
-    //   return;
-    // }
-    const newFavoriters = characterFav.filter(
-      (cardFav) => cardFav !== favCardId
-    );
+    const newFavoriters = characterFav.filter((cardFav) => cardFav !== favCard);
 
     setFavs(newFavoriters);
   };
