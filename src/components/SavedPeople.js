@@ -34,7 +34,7 @@ function SavedPeople(props) {
         value={props.filterGender}
       >
         <option className="favorites__btn" value="">
-          Todas
+          All
         </option>
         <option className="favorites__btn" value="male">
           Male
