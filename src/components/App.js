@@ -40,7 +40,6 @@ function App() {
       return element.name === clickedChar.currentTarget.id;
     });
 
-    console.log(clickedChar.currentTarget.id);
     if (favoriteCha === undefined) {
       const charFav = characters.find((element) => {
         return element.name === clickedChar.currentTarget.id;
@@ -75,7 +74,7 @@ function App() {
 
   return (
     <>
-      <header>
+      <header className="header">
         <h1 className="tittle">Web test</h1>
         <h2 className="tittle2">Play with Swapi</h2>
       </header>

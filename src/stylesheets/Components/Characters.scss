@@ -1,21 +1,19 @@
-.containerSearchPeople {
-  display: flex;
-  flex-direction: column;
+.searchPeople {
+  text-align: center;
   background-color: white;
-  margin-bottom: 10px;
 }
 
 .form__search {
   border: solid 2px rgb(0, 204, 255);
   border-radius: 5px;
   padding: 5px;
-  margin-right: -5px;
 }
 
 .headerContainer {
   display: flex;
   flex-direction: row;
   background-color: white;
+  justify-content: space-around;
 }
 
 .btn {

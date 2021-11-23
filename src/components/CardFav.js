@@ -1,8 +1,13 @@
 function Cardfav(props) {
   return (
-    <article index={props.id} id={props.id} key={props.key}>
+    <article
+      className="favorites__list__cardFav"
+      index={props.id}
+      id={props.id}
+      key={props.key}
+    >
       <img
-        className="favorites__img"
+        className="favorites__list__cardFav__img"
         src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV}"
         alt={props.name}
       ></img>

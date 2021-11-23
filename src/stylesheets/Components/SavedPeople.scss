@@ -1,13 +1,13 @@
 .favorites {
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  background-color: white;
   &__btn {
     font-size: 10px;
-    background-color: rgb(128, 121, 121);
+    background-color: rgb(38, 95, 138);
     font-size: bold;
+    color: white;
     :hover {
       font-size: 12px;
       font-weight: bold;
@@ -16,17 +16,26 @@
   &__list {
     background-color: white;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    text-align: justify;
     align-items: center;
     flex-wrap: wrap;
-  }
-  &__img {
-    width: 40px;
     @include tablet {
-      width: 80px;
+      flex-direction: row;
     }
-    @include desktop {
-      font-size: 110x;
+    &__cardFav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__img {
+        width: 40px;
+        @include tablet {
+          width: 80px;
+        }
+        @include desktop {
+          font-size: 110x;
+        }
+      }
     }
   }
 }

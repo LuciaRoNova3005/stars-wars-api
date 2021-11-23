@@ -1,30 +1,26 @@
 .card {
-  @include tablet {
-    background-color: lightgray;
-    display: flex;
-    flex-direction: row;
-  }
-}
-.list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-size: 12px;
 
-  @include tablet {
-    font-size: 16px;
-  }
   @include desktop {
-    font-size: 20px;
   }
-  &__element {
-    width: 60px;
-    text-align: center;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
 
     @include tablet {
-      width: 100px;
+      font-size: 16px;
+      justify-content: space-around;
     }
     @include desktop {
-      width: 120px;
+      font-size: 20px;
+    }
+    &__text {
+      @include tablet {
+        width: 10px;
+      }
     }
   }
 }

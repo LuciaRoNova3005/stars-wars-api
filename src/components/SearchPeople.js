@@ -11,8 +11,12 @@ const SearchPeople = (props) => {
     });
   };
   return (
-    <div className="containerSearchPeople">
-      <form className="form" onSubmit={handleSubmit}>
+    <div className="searchPeople">
+      <form
+        className="searchPeople__form"
+        onSubmit={handleSubmit}
+        className="searchPeople"
+      >
         <input
           className="form__search"
           type="text"
@@ -30,12 +34,14 @@ const SearchPeople = (props) => {
           Search
         </button>
       </form>
+      <h2 className="tittle2">Search People</h2>
       <section className="headerContainer">
         <h3 className="tittle3">Name</h3>
         <h3 className="tittle3">Gender</h3>
-        <h3 className="tittle3">Birth Year</h3>
-        <h3 className="tittle3">Eye Color</h3>
+        <h3 className="tittle3">Birth year </h3>
+        <h3 className="tittle3">Eye color</h3>
       </section>
+
       <CharactersList
         handleFav={props.handleFav}
         characters={props.characters}

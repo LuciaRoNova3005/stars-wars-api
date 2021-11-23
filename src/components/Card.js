@@ -2,18 +2,22 @@ import React from "react";
 
 function Card(props) {
   return (
-    <article className="list" id={props.id} key={props.key}>
-      <p className="list__element">{props.name}</p>
-      <p className="list__element">{props.gender}</p>
-      <p className="list__element">{props.birth}</p>
-      <p className="list__element">{props.eye}</p>
+    <article className="card" id={props.id} key={props.key}>
+      <div className="card__list">
+        <p className="card__list__text"> {props.name}</p>
+        <p>{props.gender}</p>
+        <p>{props.birth}</p>
+        <p>{props.eye}</p>
+      </div>
 
-      <button className="btn details" onClick={props.handleDetails}>
-        Show details
-      </button>
-      <button className="btn save" id={props.name} onClick={props.handleFav}>
-        Saved
-      </button>
+      <div>
+        <button className="btn details" onClick={props.handleDetails}>
+          Show details
+        </button>
+        <button className="btn save" id={props.name} onClick={props.handleFav}>
+          Saved
+        </button>
+      </div>
     </article>
   );
 }
