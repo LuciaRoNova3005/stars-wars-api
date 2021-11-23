@@ -28,7 +28,7 @@ two different genders at least)
 All data have to be retrieved from SWAPI: https://swapi.co/api/ Check the
 documentation to learn more about the available endpoints and returned data
 Components of the character list
-
+```
 src
 ├─ components
 | ├─ App.js
@@ -52,8 +52,8 @@ src
 | └─ Core
 | └─App.scss
 └─ index.js
-In the detail screen it will appear in addition to the photo, name and species, the planet of origin, the number of episodes in which it appears and if it is alive or dead.
 
+```
 ## Technologies:
 
 React / JS / SCSS
