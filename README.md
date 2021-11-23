@@ -1,33 +1,14 @@
-# Features
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## “Search people” box
-● A search input that allows you to retrieve people from SWAPI (see below).
-● Results are displayed in a list, each item can be saved or its details can be
-shown into the “information about” box.
-● A saved item doesn’t appear in results anymore
-![image](https://user-images.githubusercontent.com/81588630/141351684-82afd400-37c0-4bbf-87fb-30d31fec8417.png)
 
 
-## “Information about...” box
-●  Display the picture and all the simple information about the selected person.
+### INDEX
 
-## “Saved people” box
-● This is the list of saved people.
-● People can be removed from the list (and has to be displayed back into the
-“search people” box if the item match the current search).
-● People details can be displayed into the “Information about...” box.
-● People can be filtered by gender.
-The gender filter has to contain only the existing gender of the saved list (if there are
-two different genders at least)
+1. [Data structure](##Data-structure)
+2. [Features](##Features)
+3. [Information about](##Information-about)
+4. [Detalle de personajes](##Detalle-de-personajes)
 
-![image](https://user-images.githubusercontent.com/81588630/141351733-3a4bfc16-c23c-484f-a5e6-627891b94946.png)
 
-## SWAPI
-All data have to be retrieved from SWAPI: https://swapi.co/api/ Check the
-documentation to learn more about the available endpoints and returned data
-Components of the character list
+## Data structure
 ```
 src
 ├─ components
@@ -54,11 +35,49 @@ src
 └─ index.js
 
 ```
-## Technologies:
 
+# Features
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## “Search people” box
+● A search input that allows you to retrieve people from SWAPI (see below).
+
+● Results are displayed in a list, each item can be saved or its details can be
+shown into the “information about” box.
+
+● A saved item doesn’t appear in results anymore
+
+![image](https://user-images.githubusercontent.com/81588630/143016698-ffa5a790-2316-481e-8324-b70d0e8b1a0a.png)
+
+## “Saved people” box
+● This is the list of saved people.
+
+![image](https://user-images.githubusercontent.com/81588630/143018201-444f7dff-9054-4ff7-b34f-ae86a8b1b740.png)
+
+
+● People can be removed from the list (and has to be displayed back into the
+“search people” box if the item match the current search).
+
+● People details can be displayed into the “Information about...” box.
+
+● People can be filtered by gender.
+The gender filter has to contain only the existing gender of the saved list (if there are
+two different genders at least)
+
+![image](https://user-images.githubusercontent.com/81588630/143018550-3a0c9b43-354a-415c-bfde-c663d9eea598.png)
+
+
+## “Information about...” box
+●  Display the picture and all the simple information about the selected person.
+
+
+### SWAPI
+All data have to be retrieved from SWAPI: https://swapi.co/api/ Check the
+
+### Technologies:
 React / JS / SCSS
 
-## START IN LOCAL
+# START IN LOCAL
 
 ### Clone this repository on your computer.
 
@@ -72,6 +91,8 @@ Finally, run the following command to load a local server and be able to do the 
 ### npm start
 
 ### NOTE: It is necessary to have installed NodeJS
+
+
 
 ## Do you think I can apply any improvement?
 
