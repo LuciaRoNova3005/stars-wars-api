@@ -5,7 +5,7 @@
 1. [Data structure](##Data-structure)
 2. [Features](##Features)
 3. [Information about](##Information-about)
-4. [Detalle de personajes](##Detalle-de-personajes)
+4. [local Storage](##Local-Storage)
 
 
 ## Data structure
@@ -39,6 +39,11 @@ src
 # Features
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Intital state of the aplication
+![image](https://user-images.githubusercontent.com/81588630/143019326-54e494ab-7eee-475d-83cf-df202cdede64.png)
+
+
 ## “Search people” box
 ● A search input that allows you to retrieve people from SWAPI (see below).
 
@@ -61,14 +66,17 @@ shown into the “information about” box.
 ● People details can be displayed into the “Information about...” box.
 
 ● People can be filtered by gender.
-The gender filter has to contain only the existing gender of the saved list (if there are
-two different genders at least)
 
-![image](https://user-images.githubusercontent.com/81588630/143018550-3a0c9b43-354a-415c-bfde-c663d9eea598.png)
+![image](https://user-images.githubusercontent.com/81588630/143019509-ed0953f4-5b0c-4607-93b0-607326e2e44d.png)
 
 
 ## “Information about...” box
 ●  Display the picture and all the simple information about the selected person.
+
+## Local storage
+●  Characters must continue to appear even if the user performs another quest.
+Local storage The list of favorites must be stored in the localStorage. 
+In this way, when reloading the page the list of favorites should be shown.
 
 
 ### SWAPI
