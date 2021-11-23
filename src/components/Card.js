@@ -4,7 +4,7 @@ function Card(props) {
   return (
     <article className="card" id={props.id} key={props.key}>
       <div className="card__list">
-        <p className="card__list__text"> {props.name}</p>
+        <p> {props.name}</p>
         <p>{props.gender}</p>
         <p>{props.birth}</p>
         <p>{props.eye}</p>
