@@ -16,23 +16,23 @@
 }
 
 .tittle {
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   color: gold;
   @include tablet {
-    font-size: 22px;
+    font-size: 24px;
   }
   @include desktop {
-    font-size: 26px;
+    font-size: 28px;
   }
 }
 
 .tittle2 {
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
 
   @include tablet {
-    font-size: 18px;
+    font-size: 20px;
   }
   @include desktop {
     font-size: 22px;
