@@ -29,4 +29,8 @@ ul {
   background-color: rgb(0, 176, 199);
   color: white;
   border-radius: 5px;
+  &:hover {
+    font-size: 15px;
+    font-weight: bold;
+  }
 }

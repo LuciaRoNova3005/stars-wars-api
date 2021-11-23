@@ -18,6 +18,7 @@
 .tittle {
   font-size: 18px;
   text-align: center;
+  color: gold;
   @include tablet {
     font-size: 22px;
   }
@@ -29,6 +30,7 @@
 .tittle2 {
   font-size: 16px;
   text-align: center;
+
   @include tablet {
     font-size: 18px;
   }

@@ -76,7 +76,7 @@ function App() {
     <>
       <header className="header">
         <h1 className="tittle">Web test</h1>
-        <h2 className="tittle2">Play with Swapi</h2>
+        <h2 className="tittle2 tittle">Play with Swapi</h2>
       </header>
       <main className="container">
         <Switch>

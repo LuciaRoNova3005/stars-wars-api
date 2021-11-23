@@ -4,14 +4,11 @@
   align-items: center;
   background-color: white;
   &__btn {
-    font-size: 10px;
+    font-size: 12px;
     background-color: rgb(38, 95, 138);
     font-size: bold;
+    padding: 3px;
     color: white;
-    :hover {
-      font-size: 12px;
-      font-weight: bold;
-    }
   }
   &__list {
     background-color: white;
