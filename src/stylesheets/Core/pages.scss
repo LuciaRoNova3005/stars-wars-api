@@ -50,7 +50,6 @@
   flex-direction: column;
   text-align: center;
   align-items: justify;
-
   @include tablet {
     display: flex;
     flex-direction: row;

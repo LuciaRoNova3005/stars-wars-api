@@ -99,9 +99,7 @@ function App() {
               ></SavedPeople>
             </div>
 
-            <div>
-              <InformationAbout></InformationAbout>
-            </div>
+            <InformationAbout></InformationAbout>
           </main>
         </Route>
       </Switch>

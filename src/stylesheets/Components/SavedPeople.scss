@@ -1,4 +1,11 @@
 .favorites {
+  font-family: "Roboto", sans-serif;
+
+  &__btn {
+    font-family: "Noto Sans Mono", monospace;
+    background-color: gold;
+    font-weight: bold;
+  }
   &__list {
     display: flex;
     flex-direction: column;
@@ -12,6 +19,8 @@
       align-items: center;
       text-align: center;
       background-color: #bfbbba;
+      border: gold solid 2px;
+      border-radius: 10px;
       @include tablet {
         width: 300px;
         height: auto;
