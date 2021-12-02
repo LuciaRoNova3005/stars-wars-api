@@ -1,65 +1,7 @@
 @import "../stylesheets/Core/reset.scss";
 @import "../stylesheets/Core/mixin.scss";
+@import "../stylesheets/Core/pages.scss";
 @import "../stylesheets/Components/Characters.scss";
 @import "../stylesheets/Components/card.scss";
 @import "../stylesheets/Components/SavedPeople.scss";
 @import "../stylesheets/Components/InformationAbouts.scss";
-
-.header {
-  text-align: justify;
-}
-.container {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.tittle {
-  font-size: 20px;
-  text-align: center;
-  color: gold;
-  @include tablet {
-    font-size: 24px;
-  }
-  @include desktop {
-    font-size: 28px;
-  }
-}
-
-.tittle2 {
-  font-size: 18px;
-  text-align: center;
-
-  @include tablet {
-    font-size: 20px;
-  }
-  @include desktop {
-    font-size: 22px;
-  }
-}
-.tittle3 {
-  font-size: 12px;
-  text-align: center;
-
-  @include tablet {
-    font-size: 16px;
-  }
-  @include desktop {
-    font-size: 20px;
-  }
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  flex-wrap: wrap;
-  @include tablet {
-    display: flex;
-    flex-direction: row;
-  }
-}
-.hidden {
-  display: none;
-}

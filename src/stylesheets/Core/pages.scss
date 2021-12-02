@@ -1,0 +1,52 @@
+.tittle {
+  font-size: 30px;
+  text-align: center;
+  color: gold;
+  @include tablet {
+    font-size: 34px;
+  }
+  @include desktop {
+    font-size: 38px;
+  }
+}
+
+.tittle2 {
+  font-size: 26px;
+  text-align: center;
+  color: rgb(119, 103, 11);
+
+  @include tablet {
+    font-size: 30px;
+  }
+  @include desktop {
+    font-size: 34px;
+  }
+}
+.tittle3 {
+  font-size: 22px;
+  text-align: center;
+
+  @include tablet {
+    font-size: 26px;
+  }
+  @include desktop {
+    font-size: 30px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 15px;
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.hidden {
+  display: none;
+}
+.header {
+  margin: 20px;
+}

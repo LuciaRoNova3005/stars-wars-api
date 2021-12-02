@@ -11,44 +11,34 @@ const SearchPeople = (props) => {
     });
   };
   return (
-    <div className="searchPeople">
-      <form
-        className="searchPeople__form"
-        onSubmit={handleSubmit}
-        className="searchPeople"
-      >
-        <input
-          className="form__search"
-          type="text"
-          name="name"
-          id="name"
-          placeholder="search"
-          value={props.filterName}
-          onChange={handleChange}
-        />
-        <button
-          className="btn search"
-          onClick={props.handleCLick}
-          characters={props.characters}
-        >
-          Search
-        </button>
-      </form>
-      <h2 className="tittle2">Search People</h2>
-      <section className="headerContainer">
-        <h3 className="tittle3">Name</h3>
-        <h3 className="tittle3">Gender</h3>
-        <h3 className="tittle3">Birth year </h3>
-        <h3 className="tittle3">Eye color</h3>
-      </section>
-
+    <>
+      <div className="searchPeople">
+        <form className="searchPeople__form" onSubmit={handleSubmit}>
+          <input
+            className="searchPeople__form__search"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="search"
+            value={props.filterName}
+            onChange={handleChange}
+          />
+          <button
+            className="btn search"
+            onClick={props.handleCLick}
+            characters={props.characters}
+          >
+            Search
+          </button>
+        </form>
+      </div>
       <CharactersList
         handleFav={props.handleFav}
         characters={props.characters}
         characterFav={props.characterFav}
         getFilterFav={props.getFilterFav}
       ></CharactersList>
-    </div>
+    </>
   );
 };
 

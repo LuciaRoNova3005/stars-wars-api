@@ -2,16 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+
   &__btn {
     font-size: 12px;
     background-color: rgb(38, 95, 138);
     font-size: bold;
     padding: 3px;
-    color: white;
   }
   &__list {
-    background-color: white;
     display: flex;
     flex-direction: column;
     text-align: justify;

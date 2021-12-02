@@ -4,10 +4,10 @@ function Card(props) {
   return (
     <article className="card" id={props.id} key={props.key}>
       <div className="card__list">
-        <p> {props.name}</p>
-        <p>{props.gender}</p>
-        <p>{props.birth}</p>
-        <p>{props.eye}</p>
+        <p>Name: {props.name}</p>
+        <p>Gender: {props.gender}</p>
+        <p>Date birth{props.birth}</p>
+        <p>Color de ojos:{props.eye}</p>
       </div>
 
       <div>

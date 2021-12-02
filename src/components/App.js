@@ -76,36 +76,34 @@ function App() {
     <>
       <header className="header">
         <h1 className="tittle">Web test</h1>
-        <h2 className="tittle2 tittle">Play with Swapi</h2>
+        <h2 className="tittle">Play with Swapi</h2>
       </header>
-      <main className="container">
-        <Switch>
-          <Route exact path="/">
-            <div className="main">
-              <div>
-                <SearchPeople
-                  handleFav={handleFav}
-                  handleFilter={handleFilter}
-                  handleCLick={handleCLick}
-                  characters={filtercharacters}
-                  filterName={filterName}
-                  characterFav={characterFav}
-                ></SearchPeople>
-                <SavedPeople
-                  handleRemoveFav={handleRemoveFav}
-                  handleFilterFav={handleFilterFav}
-                  characterFav={filterFav}
-                  filterGender={filterGender}
-                ></SavedPeople>
-              </div>
-
-              <div>
-                <InformationAbout></InformationAbout>
-              </div>
+      <Switch>
+        <Route exact path="/">
+          <main className="main">
+            <div>
+              <SearchPeople
+                handleFav={handleFav}
+                handleFilter={handleFilter}
+                handleCLick={handleCLick}
+                characters={filtercharacters}
+                filterName={filterName}
+                characterFav={characterFav}
+              ></SearchPeople>
+              <SavedPeople
+                handleRemoveFav={handleRemoveFav}
+                handleFilterFav={handleFilterFav}
+                characterFav={filterFav}
+                filterGender={filterGender}
+              ></SavedPeople>
             </div>
-          </Route>
-        </Switch>
-      </main>
+
+            <div>
+              <InformationAbout></InformationAbout>
+            </div>
+          </main>
+        </Route>
+      </Switch>
     </>
   );
 }

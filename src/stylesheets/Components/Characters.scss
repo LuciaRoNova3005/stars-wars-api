@@ -1,18 +1,20 @@
 .searchPeople {
-  background-color: white;
-}
-
-.form__search {
-  border: solid 2px rgb(0, 204, 255);
-  border-radius: 5px;
-  padding: 5px;
-}
-
-.headerContainer {
+  margin: auto;
   display: flex;
-  flex-direction: row;
-  background-color: white;
-  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  &__form {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: justify;
+    &__search {
+      border: solid 2px rgb(0, 204, 255);
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
 }
 
 .btn {
