@@ -1,3 +1,5 @@
 .information {
-  text-align: justify;
+  &__text {
+    background-color: #bfbbba;
+  }
 }
