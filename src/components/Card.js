@@ -6,11 +6,10 @@ function Card(props) {
       <div className="card__list">
         <p>Name: {props.name}</p>
         <p>Gender: {props.gender}</p>
-        <p>Date birth{props.birth}</p>
-        <p>Color de ojos:{props.eye}</p>
+        <p>Date birth:{props.birth}</p>
+        <p>Eyes colors:{props.eye}</p>
       </div>
-
-      <div>
+      <div className="card__btn">
         <button className="btn details" onClick={props.handleDetails}>
           Show details
         </button>

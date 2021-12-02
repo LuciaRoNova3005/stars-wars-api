@@ -2,6 +2,7 @@
   font-size: 30px;
   text-align: center;
   color: gold;
+  font-family: "Roboto", sans-serif;
   @include tablet {
     font-size: 34px;
   }
@@ -11,9 +12,10 @@
 }
 
 .tittle2 {
+  font-family: "Roboto", sans-serif;
   font-size: 26px;
   text-align: center;
-  color: rgb(119, 103, 11);
+  color: gold;
 
   @include tablet {
     font-size: 30px;
@@ -25,7 +27,7 @@
 .tittle3 {
   font-size: 22px;
   text-align: center;
-
+  font-family: "Roboto", sans-serif;
   @include tablet {
     font-size: 26px;
   }
@@ -34,19 +36,23 @@
   }
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 15px;
-  @include tablet {
-    display: flex;
-    flex-direction: row;
-  }
-}
 .hidden {
   display: none;
 }
 .header {
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: justify;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: justify;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
 }
