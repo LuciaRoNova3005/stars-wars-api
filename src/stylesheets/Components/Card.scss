@@ -5,6 +5,9 @@
   align-items: center;
   background-color: #bfbbba;
   margin: 20px;
+  @include tablet {
+    flex-direction: row;
+  }
   &__list {
     font-size: 14px;
 
@@ -17,5 +20,20 @@
   }
   &__btn {
     text-align: center;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+.element {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include tablet {
+    flex-direction: row;
+  }
+  @include desktop {
   }
 }

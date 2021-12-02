@@ -12,14 +12,16 @@ function Cardfav(props) {
         alt={props.name}
       ></img>
       <h3 className="tittle3">{props.name}</h3>
-      <button className="btn details">Show details</button>
-      <button
-        className="btn remove"
-        onClick={props.handleRemoveFav}
-        id={props.name}
-      >
-        Remove
-      </button>
+      <div className="favorites__list__cardFav__btn">
+        <button className="btn details">Show details</button>
+        <button
+          className="btn remove"
+          onClick={props.handleRemoveFav}
+          id={props.name}
+        >
+          Remove
+        </button>
+      </div>
     </article>
   );
 }

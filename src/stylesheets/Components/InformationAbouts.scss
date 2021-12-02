@@ -1,4 +1,6 @@
 .information {
+  @include tablet {
+  }
   &__text {
     background-color: #bfbbba;
   }

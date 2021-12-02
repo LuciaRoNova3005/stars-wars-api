@@ -24,9 +24,9 @@ function CharactersList(props) {
   });
 
   return (
-    <section>
+    <section className="results">
       <h2 className="tittlesearch tittle2">Search People</h2>
-      <ul className="">{charactersElements}</ul>
+      <ul className="element">{charactersElements}</ul>
     </section>
   );
 }

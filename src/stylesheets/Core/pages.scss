@@ -54,5 +54,7 @@
   @include tablet {
     display: flex;
     flex-direction: row;
+    align-items: justify;
+    text-align: center;
   }
 }

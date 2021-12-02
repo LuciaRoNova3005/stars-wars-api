@@ -1,3 +1,7 @@
+.results {
+  margin: auto;
+}
+
 .tittlesearch {
   margin: 20px;
 }
@@ -7,11 +11,13 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+
   &__form {
     display: flex;
     flex-direction: row;
     text-align: center;
-    align-items: justify;
+    justify-content: space-between;
+
     &__search {
       border: solid 2px gold;
       border-radius: 5px;

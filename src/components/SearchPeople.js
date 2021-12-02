@@ -36,7 +36,6 @@ const SearchPeople = (props) => {
         handleFav={props.handleFav}
         characters={props.characters}
         characterFav={props.characterFav}
-        getFilterFav={props.getFilterFav}
       ></CharactersList>
     </>
   );

@@ -90,6 +90,7 @@ function App() {
                 filterName={filterName}
                 characterFav={characterFav}
               ></SearchPeople>
+
               <SavedPeople
                 handleRemoveFav={handleRemoveFav}
                 handleFilterFav={handleFilterFav}
