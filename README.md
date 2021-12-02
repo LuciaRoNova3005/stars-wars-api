@@ -41,7 +41,7 @@ src
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Intital state of the aplication
-![image](https://user-images.githubusercontent.com/81588630/143019326-54e494ab-7eee-475d-83cf-df202cdede64.png)
+![image](https://user-images.githubusercontent.com/81588630/144421447-a21dd7b3-870c-479f-bfcd-a2da65b8be02.png)
 
 
 ## “Search people” box
@@ -52,12 +52,12 @@ shown into the “information about” box.
 
 ● A saved item doesn’t appear in results anymore
 
-![image](https://user-images.githubusercontent.com/81588630/143016698-ffa5a790-2316-481e-8324-b70d0e8b1a0a.png)
+![image](https://user-images.githubusercontent.com/81588630/144421545-b441ee22-2853-4dba-844f-d6c9615b04d1.png)
 
 ## “Saved people” box
 ● This is the list of saved people.
 
-![image](https://user-images.githubusercontent.com/81588630/143020159-4bafd8bc-1e83-4d8c-9096-1ae4262a7e47.png)
+![image](https://user-images.githubusercontent.com/81588630/144421851-27251bd5-0661-47f5-b018-74edd800742f.png)
 
 ● People can be removed from the list (and has to be displayed back into the
 “search people” box if the item match the current search).
@@ -66,7 +66,7 @@ shown into the “information about” box.
 
 ● People can be filtered by gender.
 
-![image](https://user-images.githubusercontent.com/81588630/143019509-ed0953f4-5b0c-4607-93b0-607326e2e44d.png)
+![image](https://user-images.githubusercontent.com/81588630/144421979-cd016e2f-d39a-4a79-8b61-9e34c599167a.png)
 
 
 ## “Information about...” box
