@@ -1,5 +1,7 @@
 .information {
+  align-items: center;
   text-align: center;
+  margin: 10px;
   @include tablet {
   }
   &__text {
