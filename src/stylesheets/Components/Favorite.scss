@@ -22,17 +22,10 @@
       border: gold solid 2px;
       border-radius: 10px;
       @include tablet {
-        width: 300px;
-        height: auto;
       }
       &__img {
-        width: 80px;
-        margin-top: 10px;
         @include tablet {
           width: 100px;
-        }
-        @include desktop {
-          font-size: 110x;
         }
       }
     }
