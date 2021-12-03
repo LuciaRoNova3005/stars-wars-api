@@ -1,41 +1,34 @@
-.card {
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-  align-items: center;
-  background-color: #bfbbba;
-  border: gold solid 2px;
-  border-radius: 10px;
-  margin: 20px;
+.elements {
+  margin: auto;
   @include tablet {
+    display: flex;
     flex-direction: row;
-  }
-  &__list {
-    font-size: 14px;
-
-    @include tablet {
-      font-size: 16px;
-    }
-    @include desktop {
-      font-size: 20px;
-    }
-  }
-  &__btn {
-    text-align: center;
-    @include tablet {
-      display: flex;
-      flex-direction: column;
-    }
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
-.element {
+
+.card {
+  background-color: #bfbbba;
+  border: gold solid 2px;
+  width: 250px;
+  height: 240px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   text-align: center;
-  @include tablet {
-    flex-direction: row;
-  }
-  @include desktop {
+
+  &__information {
+    font-size: 14px;
+    text-align: left;
+    @include tablet {
+      font-size: 16px;
+      width: 250px;
+      height: 240px;
+    }
+    @include tablet {
+      width: 260px;
+      height: 250px;
+      font-size: 18px;
+    }
   }
 }
