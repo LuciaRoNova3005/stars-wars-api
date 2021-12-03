@@ -5,30 +5,34 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
   }
 }
 
 .card {
   background-color: #bfbbba;
   border: gold solid 2px;
-  width: 250px;
-  height: 240px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  @include tablet {
+    width: 250px;
+    height: 240px;
+  }
   &__information {
     font-size: 14px;
     text-align: left;
+
     @include tablet {
       font-size: 16px;
-      width: 250px;
-      height: 240px;
+      padding-bottom: 40px;
     }
     @include tablet {
-      width: 260px;
-      height: 250px;
       font-size: 18px;
     }
   }
+}
+.card__btn {
+  text-align: center;
 }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import ls from "../Services/local-storage";
 import { Route, Switch } from "react-router-dom";
 import getApiData from "../Services/Api";
+import CharactersList from "./CharactersList";
 import SearchPeople from "./SearchPeople";
 import InformationAbout from "./InformationAbout";
 import Favorite from "./Favorite";
@@ -90,7 +91,11 @@ function App() {
                 filterName={filterName}
                 characterFav={characterFav}
               ></SearchPeople>
-
+              <CharactersList
+                handleFav={handleFav}
+                characters={filtercharacters}
+                characterFav={characterFav}
+              ></CharactersList>
               <Favorite
                 handleRemoveFav={handleRemoveFav}
                 handleFilterFav={handleFilterFav}

@@ -1,5 +1,4 @@
 import React from "react";
-import CharactersList from "./CharactersList";
 
 const SearchPeople = (props) => {
   const handleSubmit = (ev) => {
@@ -33,11 +32,6 @@ const SearchPeople = (props) => {
           </button>
         </form>
       </div>
-      <CharactersList
-        handleFav={props.handleFav}
-        characters={props.characters}
-        characterFav={props.characterFav}
-      ></CharactersList>
     </>
   );
 };
