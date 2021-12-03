@@ -1,7 +1,7 @@
 import React from "react";
 import Cardfav from "./CardFav";
 
-function SavedPeople(props) {
+function Favorite(props) {
   const handleChangeFav = (ev) => {
     props.handleFilterFav({
       value: ev.target.value,
@@ -51,4 +51,4 @@ function SavedPeople(props) {
   );
 }
 
-export default SavedPeople;
+export default Favorite;

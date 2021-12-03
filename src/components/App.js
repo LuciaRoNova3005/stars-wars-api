@@ -6,7 +6,7 @@ import getApiData from "../Services/Api";
 import SearchPeople from "./SearchPeople";
 import CharactersList from "./CharactersList";
 import InformationAbout from "./InformationAbout";
-import SavedPeople from "./SavedPeople";
+import Favorite from "./Favorite";
 
 function App() {
   const [characters, setCharacters] = useState(ls.get("characters", []));
@@ -96,12 +96,12 @@ function App() {
                 characters={characters}
                 characterFav={characterFav}
               ></CharactersList>
-              <SavedPeople
+              <Favorite
                 handleRemoveFav={handleRemoveFav}
                 handleFilterFav={handleFilterFav}
                 characterFav={filterFav}
                 filterGender={filterGender}
-              ></SavedPeople>
+              ></Favorite>
             </div>
 
             <InformationAbout></InformationAbout>
