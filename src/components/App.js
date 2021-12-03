@@ -4,6 +4,7 @@ import ls from "../Services/local-storage";
 import { Route, Switch } from "react-router-dom";
 import getApiData from "../Services/Api";
 import SearchPeople from "./SearchPeople";
+import CharactersList from "./CharactersList";
 import InformationAbout from "./InformationAbout";
 import SavedPeople from "./SavedPeople";
 
@@ -90,7 +91,11 @@ function App() {
                 filterName={filterName}
                 characterFav={characterFav}
               ></SearchPeople>
-
+              <CharactersList
+                handleFav={handleFav}
+                characters={characters}
+                characterFav={characterFav}
+              ></CharactersList>
               <SavedPeople
                 handleRemoveFav={handleRemoveFav}
                 handleFilterFav={handleFilterFav}
