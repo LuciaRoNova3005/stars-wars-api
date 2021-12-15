@@ -15,6 +15,7 @@ function CharactersList(props) {
       <li className={ifFav ? "list hidden" : "list"} key={index}>
         <Card
           id={index}
+          handleToggleCompose={props.handleToggleCompose}
           handleFav={props.handleFav}
           onSubmit={props.handleSubmit}
           key={index}

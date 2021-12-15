@@ -10,7 +10,7 @@ function Card(props) {
         <p>Eyes colors:{props.eye}</p>
       </div>
       <div className="card__btn">
-        <button className="btn details" onClick={props.handleDetails}>
+        <button className="btn details" onClick={props.handleToggleCompose}>
           Show details
         </button>
         <button className="btn save" id={props.name} onClick={props.handleFav}>

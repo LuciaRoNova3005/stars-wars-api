@@ -5,7 +5,6 @@ import { Route, Switch } from "react-router-dom";
 import getApiData from "../Services/Api";
 import CharactersList from "./CharactersList";
 import SearchPeople from "./SearchPeople";
-import InformationAbout from "./InformationAbout";
 import Favorite from "./Favorite";
 
 function App() {
@@ -78,6 +77,35 @@ function App() {
     setComposeIsOpen(!composeIsOpen);
   };
 
+  const renderComposeModal = () => {
+    if (composeIsOpen === true) {
+      return (
+        <div>
+          <ul>
+            <li>
+              <article>
+                <p className="information__text">Name:</p>
+                <p className="information__text">Gender:</p>
+                <p className="information__text">Date birth:</p>
+                <p className="information__text">Eyes colors:</p>
+                <p className="information__text">Birth year:</p>
+                <p className="information__text">Hair color:</p>
+                <p className="information__text">Skin color:</p>
+                <p className="information__text">Mass:</p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      );
+    } else {
+      return (
+        <p className="information__text">
+          Choose someone to get more information about
+        </p>
+      );
+    }
+  };
+
   return (
     <>
       <header className="header">
@@ -100,6 +128,7 @@ function App() {
                 handleFav={handleFav}
                 characters={filtercharacters}
                 characterFav={characterFav}
+                handleToggleCompose={handleToggleCompose}
               ></CharactersList>
               <Favorite
                 handleRemoveFav={handleRemoveFav}
@@ -109,8 +138,10 @@ function App() {
                 handleToggleCompose={handleToggleCompose}
               ></Favorite>
             </div>
-
-            <InformationAbout></InformationAbout>
+            <div className="information">
+              <h2 className="tittle2">Information About</h2>
+              {renderComposeModal()}
+            </div>
           </main>
         </Route>
       </Switch>
