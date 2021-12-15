@@ -81,7 +81,6 @@ function App() {
       return element.name === clickedChar.currentTarget.id;
     });
     setcharacterDetail(favoriteDetails);
-    console.log(favoriteDetails.name);
   };
 
   const renderComposeModal = () => {
