@@ -13,6 +13,7 @@ function App() {
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
   const [characterFav, setFavs] = useState(ls.get("charactersFav", []));
   const [filterGender, setfilterGender] = useState(ls.get("filterGender", ""));
+  const [composeIsOpen, setComposeIsOpen] = useState(false);
 
   useEffect(() => {
     ls.set("character", characters);
@@ -73,6 +74,10 @@ function App() {
     setFavs(newFavoriters);
   };
 
+  const handleToggleCompose = () => {
+    setComposeIsOpen(!composeIsOpen);
+  };
+
   return (
     <>
       <header className="header">
@@ -101,6 +106,7 @@ function App() {
                 handleFilterFav={handleFilterFav}
                 characterFav={filterFav}
                 filterGender={filterGender}
+                handleToggleCompose={handleToggleCompose}
               ></Favorite>
             </div>
 

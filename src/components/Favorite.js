@@ -17,6 +17,7 @@ function Favorite(props) {
           name={fav.name}
           id={index}
           handleRemoveFav={props.handleRemoveFav}
+          handleToggleCompose={props.handleToggleCompose}
         />
       </li>
     );
