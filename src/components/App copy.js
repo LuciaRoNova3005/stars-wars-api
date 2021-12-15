@@ -6,6 +6,7 @@ import getApiData from "../Services/Api";
 import CharactersList from "./CharactersList";
 import SearchPeople from "./SearchPeople";
 import Favorite from "./Favorite";
+import renderComposeModal from "./renderComposeModal";
 
 function App() {
   const [characters, setCharacters] = useState(ls.get("characters", []));
@@ -13,7 +14,7 @@ function App() {
   const [characterFav, setFavs] = useState(ls.get("charactersFav", []));
   const [filterGender, setfilterGender] = useState(ls.get("filterGender", ""));
   const [composeIsOpen, setComposeIsOpen] = useState(false);
-  const [characterDetail, setcharacterDetail] = useState([]);
+  let characterDetail = [];
 
   useEffect(() => {
     ls.set("character", characters);
@@ -79,61 +80,40 @@ function App() {
     const favoriteDetails = characterFav.find((element) => {
       return element.name === clickedChar.currentTarget.id;
     });
-    setcharacterDetail(favoriteDetails);
-    console.log(favoriteDetails.name);
+    characterDetail = favoriteDetails;
   };
 
-  const renderComposeModal = () => {
-    if (composeIsOpen === true) {
-      return (
-        <div>
-          <ul>
-            <li>
-              <article>
-                <p className="information__text">Name:{characterDetail.name}</p>
-                <p className="information__text">
-                  Gender:{characterDetail.gender}
-                </p>
-                <p className="information__text">
-                  Height:{characterDetail.height}
-                </p>
-                <p className="information__text">Mass:{characterDetail.mass}</p>
-                <p className="information__text">Mass:{characterDetail.mass}</p>
-                <p className="information__text">
-                  Skin color:{characterDetail.skin_color}
-                </p>
-                <p className="information__text">
-                  Hair color:{characterDetail.hair_color}
-                </p>
-                <p className="information__text">
-                  Eyes colors:{characterDetail.birth_year}
-                </p>
-                <p className="information__text">
-                  Birth year:{characterDetail.birth_year}
-                </p>
-                <p className="information__text">
-                  Hair color:{characterDetail.birth_year}
-                </p>
-                <button
-                  className="btn details"
-                  id={characterDetail.name}
-                  onClick={handleToggleCompose}
-                >
-                  Delete Show details
-                </button>
-              </article>
-            </li>
-          </ul>
-        </div>
-      );
-    } else {
-      return (
-        <p className="information__text">
-          Choose someone to get more information about
-        </p>
-      );
-    }
-  };
+  // const renderComposeModal = () => {
+  //   if (composeIsOpen === true) {
+  //     return (
+  //       <div>
+  //         <ul>
+  //           <li>
+  //             <article>
+  //               <p className="information__text">Name:</p>
+  //               <p className="information__text">Gender:</p>
+  //               <p className="information__text">Date birth:</p>
+  //               <p className="information__text">Eyes colors:</p>
+  //               <p className="information__text">Birth year:</p>
+  //               <p className="information__text">Hair color:</p>
+  //               <p className="information__text">Skin color:</p>
+  //               <p className="information__text">Mass:</p>
+  //               <button className="btn details" onClick={handleToggleCompose}>
+  //                 Delete Show details
+  //               </button>
+  //             </article>
+  //           </li>
+  //         </ul>
+  //       </div>
+  //     );
+  //   } else {
+  //     return (
+  //       <p className="information__text">
+  //         Choose someone to get more information about
+  //       </p>
+  //     );
+  //   }
+  // };
 
   return (
     <>
