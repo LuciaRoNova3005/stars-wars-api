@@ -6,6 +6,7 @@ import getApiData from "../Services/Api";
 import CharactersList from "./CharactersList";
 import SearchPeople from "./SearchPeople";
 import Favorite from "./Favorite";
+import Details from "./Details";
 
 function App() {
   const [characters, setCharacters] = useState(ls.get("characters", []));
@@ -86,45 +87,10 @@ function App() {
   const renderComposeModal = () => {
     if (composeIsOpen === true) {
       return (
-        <div>
-          <ul>
-            <li>
-              <article>
-                <p className="information__text">Name:{characterDetail.name}</p>
-                <p className="information__text">
-                  Gender:{characterDetail.gender}
-                </p>
-                <p className="information__text">
-                  Height:{characterDetail.height}
-                </p>
-                <p className="information__text">Mass:{characterDetail.mass}</p>
-                <p className="information__text">Mass:{characterDetail.mass}</p>
-                <p className="information__text">
-                  Skin color:{characterDetail.skin_color}
-                </p>
-                <p className="information__text">
-                  Hair color:{characterDetail.hair_color}
-                </p>
-                <p className="information__text">
-                  Eyes colors:{characterDetail.birth_year}
-                </p>
-                <p className="information__text">
-                  Birth year:{characterDetail.birth_year}
-                </p>
-                <p className="information__text">
-                  Hair color:{characterDetail.birth_year}
-                </p>
-                <button
-                  className="btn details"
-                  id={characterDetail.name}
-                  onClick={handleToggleCompose}
-                >
-                  Delete Show details
-                </button>
-              </article>
-            </li>
-          </ul>
-        </div>
+        <Details
+          characterDetail={characterDetail}
+          handleToggleCompose={handleToggleCompose}
+        ></Details>
       );
     } else {
       return (
