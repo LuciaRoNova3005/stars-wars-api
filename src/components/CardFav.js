@@ -15,7 +15,11 @@ function Cardfav(props) {
       ></img>
       <h3 className="tittle3">{props.name}</h3>
       <div className="favorites__list__cardFav__btn">
-        <button className="btn details" onClick={props.handleToggleCompose}>
+        <button
+          className="btn details"
+          id={props.name}
+          onClick={props.handleToggleCompose}
+        >
           Show details
         </button>
 

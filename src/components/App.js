@@ -13,6 +13,7 @@ function App() {
   const [characterFav, setFavs] = useState(ls.get("charactersFav", []));
   const [filterGender, setfilterGender] = useState(ls.get("filterGender", ""));
   const [composeIsOpen, setComposeIsOpen] = useState(false);
+  let characterDetail = [];
 
   useEffect(() => {
     ls.set("character", characters);
@@ -73,8 +74,12 @@ function App() {
     setFavs(newFavoriters);
   };
 
-  const handleToggleCompose = () => {
+  const handleToggleCompose = (clickedChar) => {
     setComposeIsOpen(!composeIsOpen);
+    const favoriteCha = characterFav.find((element) => {
+      return element.name === clickedChar.currentTarget.id;
+    });
+    console.log(favoriteCha);
   };
 
   const renderComposeModal = () => {
