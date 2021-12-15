@@ -1,10 +1,6 @@
 import React from "react";
 
 function Cardfav(props) {
-  const handleToggleCompose = () => {
-    props.handleToggleCompose();
-  };
-
   return (
     <article
       className="favorites__list__cardFav"
@@ -19,7 +15,7 @@ function Cardfav(props) {
       ></img>
       <h3 className="tittle3">{props.name}</h3>
       <div className="favorites__list__cardFav__btn">
-        <button className="btn details" onClick={handleToggleCompose}>
+        <button className="btn details" onClick={props.handleToggleCompose}>
           Show details
         </button>
 

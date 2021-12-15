@@ -92,6 +92,9 @@ function App() {
                 <p className="information__text">Hair color:</p>
                 <p className="information__text">Skin color:</p>
                 <p className="information__text">Mass:</p>
+                <button className="btn details" onClick={handleToggleCompose}>
+                  Delete Show details
+                </button>
               </article>
             </li>
           </ul>
