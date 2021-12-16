@@ -18,7 +18,7 @@ src
 | ├─ CharactersList.js
 | ├─ Details.js
 | ├─ Favirute.js
-| ├─ NotCharcters.js
+| ├─ NotCharacters.js
 | ├─ SearchPeople.js
 |
 ├─ Services
