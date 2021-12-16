@@ -16,8 +16,9 @@ src
 | ├─ Card.js
 | ├─ CardFav.js
 | ├─ CharactersList.js
-| ├─ Informationabout.js
-| ├─ Savedpeople.js
+| ├─ Details.js
+| ├─ Favirute.js
+| ├─ NotCharcters.js
 | ├─ SearchPeople.js
 |
 ├─ Services
@@ -27,9 +28,9 @@ src
 ├─ stylesheets
 | └─ Components
 |  ├─ Card.scss
-|  ├─ Characters.scss
-|  ├─ Informationabout.scss
-|  ├─ SavedPeople.js
+|  ├─ Details.scss
+|  ├─ Favorite.scss
+|  ├─ SearchPeople.js
 | └─ Core
 | └─App.scss
 └─ index.js
@@ -70,7 +71,10 @@ shown into the “information about” box.
 
 
 ## “Information about...” box
-●  Display the picture and all the simple information about the selected person.
+●  When you click on the Show details button, you should see all the simple information about the selected person.
+
+![image](https://user-images.githubusercontent.com/81588630/146383600-382bf493-f478-4f29-a177-57a4bd0545c4.png)
+
 
 ## Local storage
 ●  Characters must continue to appear even if the user performs another quest.
@@ -79,7 +83,7 @@ In this way, when reloading the page the list of favorites should be shown.
 
 
 ### SWAPI
-All data have to be retrieved from SWAPI: https://swapi.co/api/ Check the
+All data have to be retrieved from SWAPI: https://swapi.co/api/ 
 
 ### Technologies:
 React / JS / SCSS
