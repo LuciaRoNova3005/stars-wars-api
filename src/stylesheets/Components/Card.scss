@@ -12,13 +12,13 @@
 .card {
   background-color: #bfbbba;
   border: gold solid 2px;
-
+  padding: 10px;
   text-align: center;
   align-items: center;
   justify-content: space-between;
   @include tablet {
     width: 250px;
-    height: 240px;
+    height: 260px;
   }
   &__information {
     font-size: 14px;
