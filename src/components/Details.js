@@ -2,37 +2,32 @@ function Details(props) {
   return (
     <article className="cardDetails">
       <ul>
-        <li className="cardDetails__text">Name:{props.characterDetail.name}</li>
         <li className="cardDetails__text">
-          Gender:{props.characterDetail.gender}
+          Name: {props.characterDetail.name}
         </li>
         <li className="cardDetails__text">
-          Height:{props.characterDetail.height}
+          Gender: {props.characterDetail.gender}
+        </li>
+        <li className="cardDetails__text">
+          Height: {props.characterDetail.height}
         </li>
         <li className="cardDetails__text">Mass:{props.characterDetail.mass}</li>
         <li className="cardDetails__text">
-          Skin color:{props.characterDetail.skin_color}
+          Skin color: {props.characterDetail.skin_color}
         </li>
         <li className="cardDetails__text">
           Hair color:{props.characterDetail.hair_color}
         </li>
         <li className="cardDetails__text">
-          Eyes colors:{props.characterDetail.birth_year}
+          Eyes colors: {props.characterDetail.birth_year}
         </li>
         <li className="cardDetails__text">
-          Birth year:{props.characterDetail.birth_year}
+          Birth year: {props.characterDetail.birth_year}
         </li>
         <li className="cardDetails__text">
-          Hair color:{props.characterDetail.birth_year}
+          Hair color: {props.characterDetail.birth_year}
         </li>
       </ul>
-      <button
-        className="btn details"
-        id={props.characterDetail.name}
-        onClick={props.handleToggleCompose}
-      >
-        Delete Show details
-      </button>
     </article>
   );
 }
