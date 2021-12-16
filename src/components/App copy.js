@@ -80,13 +80,7 @@ function App() {
     const favoriteDetails = characterFav.find((element) => {
       return element.name === clickedChar.currentTarget.id;
     });
-    if (favoriteDetails === undefined) {
-      const favoriteDetails = characters.find((element) => {
-        return element.name === clickedChar.currentTarget.id;
-      });
-      setcharacterDetail(favoriteDetails);
-      return;
-    }
+    setcharacterDetail(favoriteDetails);
   };
 
   const renderComposeModal = () => {
