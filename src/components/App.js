@@ -87,6 +87,8 @@ function App() {
       setcharacterDetail(favoriteDetails);
       return;
     }
+    setcharacterDetail(favoriteDetails);
+    return;
   };
 
   const renderComposeModal = () => {

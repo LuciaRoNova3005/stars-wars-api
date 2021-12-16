@@ -1,6 +1,16 @@
 .cardDetails {
-  background-color: grey;
+  background-color: #bfbbba;
   align-items: center;
   text-align: center;
   margin: 10px;
+  &__text {
+    font-size: 14px;
+    padding: 10px;
+    @include tablet {
+      font-size: 16px;
+    }
+    @include tablet {
+      font-size: 18px;
+    }
+  }
 }
