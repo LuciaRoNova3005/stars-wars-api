@@ -1,14 +1,31 @@
 .searchPeople {
+  display: flex;
+  flex-direction: row;
   &__form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
     margin: auto;
-
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+    }
     &__search {
       border: solid 4px gold;
       border-radius: 5px;
+      text-align: center;
+      padding: 5px;
+      @include tablet {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     }
+  }
+}
+.search {
+  @include tablet {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
