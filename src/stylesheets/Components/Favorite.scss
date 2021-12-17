@@ -9,6 +9,7 @@
       padding-left: 10px;
       padding-right: 20px;
       font-size: 18px;
+      margin-top: 20px;
     }
   }
   &__list {
@@ -17,6 +18,7 @@
     @include tablet {
       flex-direction: row;
       flex-wrap: wrap;
+      margin: 30px;
     }
     &__cardFav {
       display: flex;
