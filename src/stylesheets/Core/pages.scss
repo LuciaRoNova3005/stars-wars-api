@@ -11,6 +11,12 @@
   text-align: center;
   align-items: center;
   margin: auto;
+  &__listCharacters {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }
 .tittle {
   font-size: 30px;

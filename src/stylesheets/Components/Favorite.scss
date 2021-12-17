@@ -18,7 +18,8 @@
     @include tablet {
       flex-direction: row;
       flex-wrap: wrap;
-      margin: 30px;
+      text-align: center;
+      justify-content: center;
     }
     &__cardFav {
       display: flex;
@@ -26,7 +27,7 @@
       align-items: center;
       text-align: center;
       background-color: #bfbbba;
-      border: gold solid 2px;
+      border: gold solid 4px;
       border-radius: 10px;
       @include tablet {
         width: 250px;

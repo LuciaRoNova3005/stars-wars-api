@@ -4,11 +4,11 @@
 .elements {
   margin-top: 20px;
   @include tablet {
-    margin: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
   }
 }
 
@@ -22,7 +22,6 @@
 
   @include tablet {
     width: 350px;
-    height: 250px;
   }
   &__information {
     font-size: 14px;
@@ -37,7 +36,5 @@
   }
   &__btn {
     text-align: center;
-
-    margin-top: 0px;
   }
 }

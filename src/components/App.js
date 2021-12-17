@@ -117,32 +117,34 @@ function App() {
       <Switch>
         <Route exact path="/">
           <main className="main">
-            <div>
-              <SearchPeople
-                handleFav={handleFav}
-                handleFilter={handleFilter}
-                handleCLick={handleCLick}
-                characters={filtercharacters}
-                filterName={filterName}
-                characterFav={characterFav}
-              ></SearchPeople>
-              <CharactersList
-                handleFav={handleFav}
-                characters={filtercharacters}
-                characterFav={characterFav}
-                handleToggleCompose={handleToggleCompose}
-              ></CharactersList>
-              <Favorite
-                handleRemoveFav={handleRemoveFav}
-                handleFilterFav={handleFilterFav}
-                characterFav={filterFav}
-                filterGender={filterGender}
-                handleToggleCompose={handleToggleCompose}
-              ></Favorite>
-            </div>
-            <div className="information">
-              <h2 className="tittle2">Information About</h2>
-              {renderComposeModal()}
+            <SearchPeople
+              handleFav={handleFav}
+              handleFilter={handleFilter}
+              handleCLick={handleCLick}
+              characters={filtercharacters}
+              filterName={filterName}
+              characterFav={characterFav}
+            ></SearchPeople>
+            <div className="main__listCharacters">
+              <div>
+                <CharactersList
+                  handleFav={handleFav}
+                  characters={filtercharacters}
+                  characterFav={characterFav}
+                  handleToggleCompose={handleToggleCompose}
+                ></CharactersList>
+                <Favorite
+                  handleRemoveFav={handleRemoveFav}
+                  handleFilterFav={handleFilterFav}
+                  characterFav={filterFav}
+                  filterGender={filterGender}
+                  handleToggleCompose={handleToggleCompose}
+                ></Favorite>
+              </div>
+              <div className="informationContainer">
+                <h2 className="tittle2">Information About</h2>
+                {renderComposeModal()}
+              </div>
             </div>
           </main>
         </Route>
