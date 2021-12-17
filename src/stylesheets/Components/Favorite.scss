@@ -21,6 +21,7 @@
     background-color: gold;
     font-weight: bold;
     padding-right: 5px;
+    border: white solid 2px;
     border-radius: 5px;
     &:hover {
       transform: scale(1.2);
@@ -54,5 +55,25 @@
         }
       }
     }
+  }
+}
+.details {
+  background-color: gold;
+  padding: 5px;
+  border: #000000 solid 2px;
+  border-radius: 5px;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+.remove {
+  background-color: gold;
+  padding: 5px;
+  border: #000000 solid 2px;
+  border-radius: 5px;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
   }
 }

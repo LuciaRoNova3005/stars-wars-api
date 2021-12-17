@@ -16,7 +16,7 @@ function Cardfav(props) {
       <h3 className="tittle3">{props.name}</h3>
       <div className="favorites__list__cardFav__btn">
         <button
-          className="btn details"
+          className="details"
           id={props.name}
           onClick={props.handleToggleCompose}
         >
@@ -24,7 +24,7 @@ function Cardfav(props) {
         </button>
 
         <button
-          className="btn remove"
+          className="remove"
           onClick={props.handleRemoveFav}
           id={props.name}
         >

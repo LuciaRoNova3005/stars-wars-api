@@ -18,6 +18,7 @@ function Favorite(props) {
           id={index}
           handleRemoveFav={props.handleRemoveFav}
           handleToggleCompose={props.handleToggleCompose}
+          handleReset={props.handleReset}
         />
       </li>
     );

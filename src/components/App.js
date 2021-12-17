@@ -90,6 +90,9 @@ function App() {
     setcharacterDetail(favoriteDetails);
     return;
   };
+  const handleReset = () => {
+    setFavs([]);
+  };
 
   const renderComposeModal = () => {
     if (composeIsOpen === true) {
@@ -139,6 +142,7 @@ function App() {
                   characterFav={filterFav}
                   filterGender={filterGender}
                   handleToggleCompose={handleToggleCompose}
+                  handleReset={handleReset}
                 ></Favorite>
               </div>
               <div className="informationContainer">
