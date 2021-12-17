@@ -19,10 +19,10 @@
   padding: 10px;
   text-align: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: justify;
   @include tablet {
-    width: 250px;
-    height: 260px;
+    width: 320px;
+    height: 250px;
   }
   &__information {
     font-size: 14px;
