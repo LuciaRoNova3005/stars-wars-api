@@ -1,14 +1,14 @@
-.searchPeople {
+.containerCard {
   margin: 20px;
 }
 .elements {
   margin-top: 20px;
   @include tablet {
+    margin: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
   }
 }
 
@@ -19,9 +19,9 @@
   padding: 10px;
   text-align: center;
   align-items: center;
-  justify-content: justify;
+
   @include tablet {
-    width: 320px;
+    width: 350px;
     height: 250px;
   }
   &__information {
@@ -35,7 +35,9 @@
       font-size: 18px;
     }
   }
-}
-.card__btn {
-  text-align: center;
+  &__btn {
+    text-align: center;
+
+    margin-top: 0px;
+  }
 }
