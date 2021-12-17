@@ -19,7 +19,7 @@ const SearchPeople = (props) => {
             type="text"
             name="name"
             id="name"
-            placeholder="search"
+            placeholder="enter a name"
             value={props.filterName}
             onChange={handleChange}
           />

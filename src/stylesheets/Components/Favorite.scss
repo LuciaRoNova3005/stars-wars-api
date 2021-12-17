@@ -5,6 +5,11 @@
     font-family: "Noto Sans Mono", monospace;
     background-color: gold;
     font-weight: bold;
+    @include tablet {
+      padding-left: 10px;
+      padding-right: 20px;
+      font-size: 18px;
+    }
   }
   &__list {
     display: flex;

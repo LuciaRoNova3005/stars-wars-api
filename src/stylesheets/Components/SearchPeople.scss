@@ -19,6 +19,7 @@
       @include tablet {
         padding-left: 20px;
         padding-right: 20px;
+        font-size: 18px;
       }
     }
   }
@@ -27,5 +28,6 @@
   @include tablet {
     padding-left: 20px;
     padding-right: 20px;
+    font-size: 18px;
   }
 }
