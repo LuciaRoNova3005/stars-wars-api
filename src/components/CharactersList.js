@@ -29,7 +29,7 @@ function CharactersList(props) {
   });
 
   return (
-    <section className="">
+    <section className="searchPeople">
       <h2 className="tittle2">Search People</h2>
       <ul className="elements">{charactersElements}</ul>
     </section>

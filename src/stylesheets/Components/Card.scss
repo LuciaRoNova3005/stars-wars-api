@@ -1,5 +1,8 @@
+.searchPeople {
+  margin: 20px;
+}
 .elements {
-  margin: auto;
+  margin-top: 20px;
   @include tablet {
     display: flex;
     flex-direction: row;
