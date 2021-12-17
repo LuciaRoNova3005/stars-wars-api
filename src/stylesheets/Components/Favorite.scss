@@ -15,7 +15,7 @@
     @include tablet {
       padding-left: 10px;
       padding-right: 20px;
-      font-size: 18px;
+      font-size: 20px;
       margin-top: 20px;
     }
   }
@@ -23,17 +23,12 @@
     font-family: "Noto Sans Mono", monospace;
     background-color: gold;
     font-weight: bold;
-    padding-right: 5px;
+    padding: 5px;
     border: white solid 2px;
     border-radius: 5px;
     &:hover {
       transform: scale(1.2);
       cursor: pointer;
-    }
-    @include tablet {
-      font-size: 20px;
-      padding: 5px;
-      padding-right: 10px;
     }
   }
   &__list {
@@ -80,8 +75,16 @@
   padding: 5px;
   border: #000000 solid 2px;
   border-radius: 5px;
+  font-weight: bold;
   &:hover {
     transform: scale(1.2);
     cursor: pointer;
+  }
+}
+.reset {
+  font-size: 14px;
+
+  @include tablet {
+    font-size: 18px;
   }
 }

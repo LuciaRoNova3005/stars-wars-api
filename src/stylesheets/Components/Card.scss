@@ -38,3 +38,10 @@
     text-align: center;
   }
 }
+.save {
+  font-weight: bold;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}

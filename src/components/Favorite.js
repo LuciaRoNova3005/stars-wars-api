@@ -50,8 +50,7 @@ function Favorite(props) {
         <ul className="favorites__list">{charactersFav}</ul>
       </section>
       <button className="favorites__reset" onClick={props.handleReset}>
-        <i className="far fa-trash-alt"></i>
-        Reset
+        <i className="reset far fa-trash-alt"></i>
       </button>
     </div>
   );

@@ -3,10 +3,9 @@
   background-color: #bfbbba;
   padding: 15px;
   text-align: justify;
-  border-radius: 30px;
+  border-radius: 40px;
   border: gold solid 4px;
   font-weight: bold;
-
   &__text {
     font-size: 14px;
     padding: 10px;
@@ -21,5 +20,18 @@
 .informationContainer {
   @include tablet {
     width: 800px;
+  }
+}
+.information__text {
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  padding: 10px;
+  @include tablet {
+    font-size: 16px;
+  }
+  @include tablet {
+    font-size: 18px;
   }
 }
