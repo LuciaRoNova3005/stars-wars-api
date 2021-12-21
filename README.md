@@ -42,7 +42,7 @@ src
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Intital state of the aplication
-![image](https://user-images.githubusercontent.com/81588630/144421447-a21dd7b3-870c-479f-bfcd-a2da65b8be02.png)
+![image](https://user-images.githubusercontent.com/81588630/146932064-353f61fe-b611-41b3-bf45-b06b600d1cc4.png)
 
 
 ## “Search people” box
@@ -73,7 +73,7 @@ shown into the “information about” box.
 ## “Information about...” box
 ●  When you click on the Show details button, you should see all the simple information about the selected person.
 
-![image](https://user-images.githubusercontent.com/81588630/146383600-382bf493-f478-4f29-a177-57a4bd0545c4.png)
+![image](https://user-images.githubusercontent.com/81588630/146932174-cc2b0cb0-2f25-4109-9aa1-ce38c6276659.png)
 
 
 ## Local storage
