@@ -16,8 +16,6 @@ function App() {
   const [filterGender, setfilterGender] = useState(ls.get("filterGender", ""));
   const [composeIsOpen, setComposeIsOpen] = useState(false);
   const [characterDetail, setcharacterDetail] = useState([]);
-  console.log(characters);
-  console.log(filterName);
 
   useEffect(() => {
     ls.set("character", characters);
