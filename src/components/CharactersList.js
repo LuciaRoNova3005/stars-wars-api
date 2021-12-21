@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "./Card";
-import NotCharactersFound from "./NotCharactersFound";
 
 function CharactersList(props) {
   const charactersElements = props.characters.map((element, index) => {
