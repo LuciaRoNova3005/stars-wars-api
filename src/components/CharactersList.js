@@ -1,11 +1,7 @@
 import React from "react";
 import Card from "./Card";
-import NotCharacters from "./NotCharacers";
 
 function CharactersList(props) {
-  if (props.characters === []) {
-    return <NotCharacters />;
-  }
   const charactersElements = props.characters.map((element, index) => {
     const ifFav = props.characterFav.find(
       (favorite) => favorite.name === element.name

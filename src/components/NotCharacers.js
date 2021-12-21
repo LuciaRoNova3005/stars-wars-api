@@ -1,7 +1,9 @@
 const NotCharacters = (props) => {
   return (
-    <section className="characterNotFound">
-      <p className="text">There are no characters that match your searches</p>
+    <section className="">
+      <p className="text">
+        Enter a name to start searching or click on the button
+      </p>
     </section>
   );
 };

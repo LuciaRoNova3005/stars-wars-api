@@ -6,7 +6,6 @@ function Cardfav(props) {
       className="favorites__list__cardFav"
       index={props.id}
       id={props.id}
-      key={props.key}
     >
       <img
         className="favorites__list__cardFav__img"

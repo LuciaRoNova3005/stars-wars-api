@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import ls from "../Services/local-storage";
 import { Route, Switch } from "react-router-dom";
 import getApiData from "../Services/Api";
+import NotCharacters from "./NotCharacers";
 import CharactersList from "./CharactersList";
 import SearchPeople from "./SearchPeople";
 import Favorite from "./Favorite";
@@ -15,6 +16,8 @@ function App() {
   const [filterGender, setfilterGender] = useState(ls.get("filterGender", ""));
   const [composeIsOpen, setComposeIsOpen] = useState(false);
   const [characterDetail, setcharacterDetail] = useState([]);
+  console.log(characters);
+  console.log(filterName);
 
   useEffect(() => {
     ls.set("character", characters);
@@ -94,6 +97,11 @@ function App() {
     setFavs([]);
   };
 
+  const renderNotCharacters = () => {
+    if (characters.length === 0) {
+      return <NotCharacters />;
+    }
+  };
   const renderComposeModal = () => {
     if (composeIsOpen === true) {
       return (
@@ -128,6 +136,7 @@ function App() {
               filterName={filterName}
               characterFav={characterFav}
             ></SearchPeople>
+            {renderNotCharacters()}
             <div className="main__listCharacters">
               <div>
                 <CharactersList

@@ -10,6 +10,7 @@ const SearchPeople = (props) => {
       key: "name",
     });
   };
+
   return (
     <>
       <div className="searchPeople">
