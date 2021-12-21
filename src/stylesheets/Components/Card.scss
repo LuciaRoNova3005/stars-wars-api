@@ -1,14 +1,10 @@
-.containerCard {
-  margin: 20px;
-}
 .elements {
   margin-top: 20px;
   @include tablet {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 20px;
   }
 }
 

@@ -3,7 +3,7 @@ import Card from "./Card";
 import NotCharacters from "./NotCharacers";
 
 function CharactersList(props) {
-  if (props.characters.length === 0) {
+  if (props.characters === []) {
     return <NotCharacters />;
   }
   const charactersElements = props.characters.map((element, index) => {

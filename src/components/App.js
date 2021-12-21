@@ -104,9 +104,7 @@ function App() {
       );
     } else {
       return (
-        <p className="information__text">
-          Choose someone to get more information about
-        </p>
+        <p className="text">Choose someone to get more information about</p>
       );
     }
   };
