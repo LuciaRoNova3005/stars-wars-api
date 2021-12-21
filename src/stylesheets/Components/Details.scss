@@ -1,10 +1,3 @@
-// .informationContainer {
-//   display: flex;
-//   flex-direction: column;
-//   text-align: center;
-//   align-items: center;
-// }
-
 .cardDetails {
   margin-top: 20px;
   background-color: #bfbbba;
@@ -13,6 +6,7 @@
   border-radius: 40px;
   border: gold solid 4px;
   font-weight: bold;
+
   &__text {
     font-size: 14px;
     padding: 10px;
@@ -26,15 +20,7 @@
 }
 
 .information__text {
-  margin: auto;
-  text-align: center;
-  font-size: 14px;
-  color: white;
-  padding: 10px;
   @include tablet {
-    font-size: 16px;
-  }
-  @include tablet {
-    font-size: 18px;
+    margin-left: 40px;
   }
 }
