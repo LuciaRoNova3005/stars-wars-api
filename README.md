@@ -17,7 +17,7 @@ src
 | ├─ CardFav.js
 | ├─ CharactersList.js
 | ├─ Details.js
-| ├─ Favirute.js
+| ├─ Favorite.js
 | ├─ NotCharacters.js
 | ├─ SearchPeople.js
 |
