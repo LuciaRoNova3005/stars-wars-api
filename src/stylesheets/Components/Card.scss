@@ -1,39 +1,36 @@
 .elements {
   margin-top: 20px;
+
   @include tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
-    margin: auto;
+  }
+  &__card {
+    background-color: #bfbbba;
+    border: gold solid 4px;
+    border-radius: 5%;
+    padding: 5px;
+
+    @include tablet {
+      width: 350px;
+    }
+    &__information {
+      font-size: 14px;
+
+      @include tablet {
+        font-size: 16px;
+      }
+      @include tablet {
+        font-size: 18px;
+      }
+      &__btn {
+        text-align: center;
+      }
+    }
   }
 }
 
-.card {
-  background-color: #bfbbba;
-  border: gold solid 4px;
-  border-radius: 5%;
-  padding: 10px;
-  text-align: center;
-  align-items: center;
-
-  @include tablet {
-    width: 350px;
-  }
-  &__information {
-    font-size: 14px;
-    text-align: left;
-
-    @include tablet {
-      font-size: 16px;
-    }
-    @include tablet {
-      font-size: 18px;
-    }
-  }
-  &__btn {
-    text-align: center;
-  }
-}
 .save {
   font-weight: bold;
   &:hover {
