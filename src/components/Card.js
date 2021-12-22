@@ -3,13 +3,13 @@ import React from "react";
 function Card(props) {
   return (
     <article className="elements__card" id={props.id} key={props.key}>
-      <div className="card__information">
-        <p>Name: {props.name}</p>
-        <p>Gender: {props.gender}</p>
-        <p>Date birth:{props.birth}</p>
-        <p>Eyes colors:{props.eye}</p>
-      </div>
-      <div className="card__btn">
+      <ul className="elements__card__information">
+        <li>Name: {props.name}</li>
+        <li>Gender: {props.gender}</li>
+        <li>Date birth:{props.birth}</li>
+        <li>Eyes colors:{props.eye}</li>
+      </ul>
+      <div className="elements__card__btn">
         <button
           className="btn details"
           id={props.name}

@@ -11,13 +11,15 @@
     border: gold solid 4px;
     border-radius: 5%;
     padding: 5px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include tablet {
-      width: 350px;
+      width: 320px;
     }
     &__information {
       font-size: 14px;
-
+      text-align: justify;
       @include tablet {
         font-size: 16px;
       }
