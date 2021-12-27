@@ -8,7 +8,7 @@
 4. [local Storage](##Local-Storage)
 
 
-## Data structure
+# Data structure
 ```
 src
 ├─ components
