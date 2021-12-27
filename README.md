@@ -2,10 +2,10 @@
 
 ### INDEX
 
-1. [Data structure](##Data-structure)
-2. [Features](##Features)
-3. [Information about](##Information-about)
-4. [local Storage](##Local-Storage)
+1. [Data structure](#Data-structure)
+2. [Features](#Features)
+3. [Information about](#Information-about)
+4. [local Storage](#Local-Storage)
 
 
 # Data structure
