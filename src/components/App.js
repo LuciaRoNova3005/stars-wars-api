@@ -161,8 +161,7 @@ function App() {
             </div>
           </main>
           <footer className="footer">
-            <small> Lucía Rodríguez Nova </small>
-            <img className="header__logo" src={Logo} alt="Logo Star Wars"></img>
+            <img className="footer__logo" src={Logo} alt="Logo Star Wars"></img>
           </footer>
         </Route>
       </Switch>
