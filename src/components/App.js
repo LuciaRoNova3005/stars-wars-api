@@ -2,6 +2,7 @@ import "../stylesheets/App.scss";
 import React, { useState, useEffect } from "react";
 import ls from "../Services/local-storage";
 import { Route, Switch } from "react-router-dom";
+import Logo from "../img/logo.png";
 import getApiData from "../Services/Api";
 import NotCharacters from "./NotCharacers";
 import CharactersList from "./CharactersList";
@@ -120,8 +121,8 @@ function App() {
   return (
     <>
       <header className="header">
-        <h1 className="tittle">Web test</h1>
-        <h2 className="tittle">Play with Swapi</h2>
+        <img className="header__logo" src={Logo} alt="Logo Star Wars"></img>
+        <h1 className="tittle">Play with Swapi - Star Wars </h1>
       </header>
       <Switch>
         <Route exact path="/">
