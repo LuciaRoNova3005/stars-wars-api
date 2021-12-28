@@ -121,8 +121,9 @@ function App() {
   return (
     <>
       <header className="header">
-        <img className="header__logo" src={Logo} alt="Logo Star Wars"></img>
-        <h1 className="tittle">Play with Swapi - Star Wars </h1>
+        <h1 className="tittle">Web Test </h1>
+
+        <h2 className="tittle2">Play with Swapi - Star Wars </h2>
       </header>
       <Switch>
         <Route exact path="/">
@@ -159,6 +160,10 @@ function App() {
               </div>
             </div>
           </main>
+          <footer className="footer">
+            <small> Lucía Rodríguez Nova </small>
+            <img className="header__logo" src={Logo} alt="Logo Star Wars"></img>
+          </footer>
         </Route>
       </Switch>
     </>
