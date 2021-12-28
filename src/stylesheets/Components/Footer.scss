@@ -2,8 +2,14 @@
   margin: auto;
   text-align: center;
   &__logo {
-    width: 200px;
+    width: 100px;
     margin: auto;
     padding: 20px;
+    @include tablet {
+      width: 200px;
+    }
+    @include desktop {
+      font-size: 300px;
+    }
   }
 }
