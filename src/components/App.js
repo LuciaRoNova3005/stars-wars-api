@@ -121,6 +121,7 @@ function App() {
   return (
     <>
       <header className="header">
+        <img className="header__logo" src={Logo} alt="Logo Star Wars"></img>
         <h1 className="tittle">Web Test </h1>
 
         <h2 className="tittle2">Play with Swapi - Star Wars </h2>

@@ -4,6 +4,17 @@
   text-align: center;
   align-items: justify;
   margin: auto;
+  &__logo {
+    margin: auto;
+    width: 80px;
+    padding: 20px;
+    @include tablet {
+      width: 100px;
+    }
+    @include desktop {
+      font-size: 200px;
+    }
+  }
 }
 
 .main {
