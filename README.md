@@ -1,3 +1,6 @@
+
+Star Wars character finder that allows us to save them in favorites and see the detail of the characters through a modal <br>
+
 ### INDEX
 
 1. [Data structure](#Data-structure)
