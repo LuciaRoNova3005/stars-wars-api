@@ -45,7 +45,7 @@ src
 # Features
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+<br>
 ## Intital state of the aplication
 
 ![image](https://user-images.githubusercontent.com/81588630/146932064-353f61fe-b611-41b3-bf45-b06b600d1cc4.png)
@@ -92,7 +92,7 @@ In this way, when reloading the page the list of favorites should be shown.
 
 All data have to be retrieved from SWAPI: https://swapi.co/api/
 
-## Technologies:🛠️
+## 🛠️Technologies:
 
 React / JS / SCSS
 
