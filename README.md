@@ -92,10 +92,10 @@ In this way, when reloading the page the list of favorites should be shown.
 
 All data have to be retrieved from SWAPI: https://swapi.co/api/
 
-### Technologies:
+## Technologies:🛠️
 
 React / JS / SCSS
-
+```
 # START IN LOCAL
 
 ### Clone this repository on your computer.
