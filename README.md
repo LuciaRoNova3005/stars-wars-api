@@ -1,4 +1,3 @@
-
 Star Wars character finder that allows us to save them in favorites and see the detail of the characters through a modal <br>
 
 ### INDEX
@@ -42,10 +41,11 @@ src
 
 ```
 
-# Features
+# 📄 Features
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 <br>
+
 ## Intital state of the aplication
 
 ![image](https://user-images.githubusercontent.com/81588630/146932064-353f61fe-b611-41b3-bf45-b06b600d1cc4.png)
