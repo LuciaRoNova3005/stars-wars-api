@@ -65,7 +65,7 @@ shown into the “information about” box.
 
 ● This is the list of saved people.
 
-![image](https://user-images.githubusercontent.com/81588630/144421851-27251bd5-0661-47f5-b018-74edd800742f.png)
+![image](https://user-images.githubusercontent.com/81588630/144421851-27251bd5-0661-47f5-b018-74edd800742f.png) <br>
 
 ● People can be removed from the list (and has to be displayed back into the
 “search people” box if the item match the current search).
