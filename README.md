@@ -41,7 +41,7 @@ src
 
 ```
 
-# Features 📄
+# 📄Features 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 <br>
@@ -92,11 +92,12 @@ In this way, when reloading the page the list of favorites should be shown.
 
 All data have to be retrieved from SWAPI: https://swapi.co/api/
 
-## 🛠️Technologies:
+## 🛠️Technologies 
 
-React / JS / SCSS
+React / JS / SCSS <br>
+<br>
 
-# START IN LOCAL
+# 🚀START IN LOCAL 
 
 ### Clone this repository on your computer.
 
